@@ -1,0 +1,103 @@
+﻿@model OnlineServices.Models.PersonTypeListModel
+@using OnlineServices.Utilities.Extensions
+
+@{
+    ViewData["Title"] = "مدیریت نوع همکاران";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header row">
+    <div class="content-header-left col-12 my-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h5 class="content-header-title float-left">@ViewData["Title"]</h5>
+                <div class="breadcrumb-wrapper ">
+                    <ol class="breadcrumb p-0 pl-1 mb-0">
+                        <li class="breadcrumb-item">
+                            <a asp-controller="Home" asp-action="Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            @ViewData["Title"]
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-body">
+    <section id="persontype-list-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content table-responsive">
+                        <table class="table mb-0 line-height-1">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        نوع همکار
+                                    </th>
+                                    <th>
+                                        توضیحات
+                                    </th>
+                                    <th>
+                                        دسترسی به پنل مدیریت
+                                    </th>
+                                    <th>
+                                        دسترسی به سرویس های برنامه
+                                    </th>
+                                    <th>
+                                        دسترسی به برنامه کاربر
+                                    </th>
+                                    <th>
+                                        وضعیت
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.PersonTypeModel)
+                                {
+                                    <tr>
+                                        <td>
+                                            @item.Title
+                                        </td>
+                                        <td>
+                                            @item.Description
+                                        </td>
+                                        <td>
+                                            <div class="checkbox checkbox-sm">
+                                                <input type="checkbox" class="checkbox-input" id="chkPanelAccess" disabled @(item.PanelAccess ? "checked" : "")>
+                                                <label for="chkPanelAccess"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="checkbox checkbox-sm">
+                                                <input type="checkbox" class="checkbox-input" id="chkServiceAppAccess" disabled @(item.ServiceAppAccess ? "checked" : "")>
+                                                <label for="chkServiceAppAccess"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="checkbox checkbox-sm">
+                                                <input type="checkbox" class="checkbox-input" id="chkUserAppAccess" disabled @(item.UserAppAccess ? "checked" : "")>
+                                                <label for="chkUserAppAccess"></label>
+                                            </div>
+                                        </td>
+                                        <td class="@(item.IsActive ? "text-success" : "text-danger")">
+                                            @(item.IsActive ? "فعال" : "غیرفعال")
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    @{
+                        var pager = Html.Pager(Model.PagerModel);
+                    }
+                    <div class="pager">
+                        @pager
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,78 @@
+﻿@model OnlineServices.Models.ModelGalleryListModel
+@using OnlineServices.Utilities.Extensions
+
+@{
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-12">
+        <a href="javascript:" data-id="0" class="btn btn-primary mr-1 mb-1 model-gallery-edit">تصویر جدید</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body">
+                    <table class="table mb-0 line-height-2">
+                        <thead>
+                            <tr>
+                                <th>
+                                    تصویر
+                                </th>
+                                <th>
+                                    عنوان
+                                </th>
+                                <th>
+                                    توضیحات
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.ModelGalleryModel.Count > 0)
+                            {
+                                foreach (var item in Model.ModelGalleryModel)
+                                {
+                                    <tr>
+                                        <td>
+                                            <img src="~/Uploads/Model/@item.ImageName"
+                                                 class="mx-w-40"
+                                                 asp-append-version="true" />
+                                        </td>
+                                        <td>
+                                            @item.Title
+                                        </td>
+                                        <td>
+                                            @item.Description
+                                        </td>
+                                        <td>
+                                            <a href="javascript:" data-id="@item.Id"
+                                               class="btn btn-danger mr-1 mb-1 delete-modelImage">حذف</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center">
+                                        اطلاعاتی جهت نمایش موجود نمی باشد
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                @{
+                    var pager = Html.AjaxPager(Model.PagerModel, "-model-gallery");
+                }
+                <div class="pager">
+                    @pager
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

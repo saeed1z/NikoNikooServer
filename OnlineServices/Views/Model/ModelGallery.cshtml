@@ -1,0 +1,65 @@
+﻿@model OnlineServices.Models.ModelGalleryModel
+@using OnlineServices.Utilities.Extensions
+
+@{
+    Layout = null;
+}
+@Html.HiddenFor(m => m.Id, new { id = "ModelGalleryId" })
+<div class="content-body">
+    <section>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <fieldset class="form-group text-center">
+                                        @if (Model.ImageName != null)
+                                        {
+                                            <img src="~/Uploads/Model/@Model.ImageName"
+                                                 class="mx-w-400"
+                                                 asp-append-version="true" />
+                                        }
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset class="form-group">
+                                        <label for="customFile">تصویر</label>
+                                        <div class="custom-file">
+                                            <input asp-for="ImageNameImage" type="file" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label" for="customFile">با کلیک فایل خود را انتخاب و یا ویرایش کنید</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset class="form-group">
+                                        <label>عنوان</label>
+                                        <input type="text" class="form-control" asp-for="Title" id="txtModelGalleryTitle" placeholder="عنوان را وارد کنید" autocomplete="off">
+                                        <span asp-validation-for="Title" class="invalid-feedback"></span>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset class="form-group">
+                                        <label>توضیحات</label>
+                                        <textarea class="form-control" asp-for="Description" rows="2" id="txtModelGalleryDescription" placeholder="توضیحات را وارد کنید"></textarea>
+                                        <span asp-validation-for="Description" class="invalid-feedback"></span>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="row">
+        <div class="col-12">
+            <button type="button" class="btn btn-success glow mr-1 mb-1 save-model-image">
+                <i class="bx bx-check"></i>
+                <span class="align-middle ml-25">ثبت اطلاعات</span>
+            </button>
+        </div>
+    </div>
+</div>
+

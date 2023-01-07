@@ -1,0 +1,10 @@
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\bin\Debug\netcoreapp3.1\OnlineServices.Entity.deps.json
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\bin\Debug\netcoreapp3.1\OnlineServices.Entity.dll
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\bin\Debug\netcoreapp3.1\OnlineServices.Entity.pdb
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.csproj.AssemblyReference.cache
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.AssemblyInfoInputs.cache
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.AssemblyInfo.cs
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.csproj.CoreCompileInputs.cache
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.dll
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.pdb

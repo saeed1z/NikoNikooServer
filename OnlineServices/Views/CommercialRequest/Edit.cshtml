@@ -1,0 +1,173 @@
+﻿@model OnlineServices.Models.CommercialUserRequestModel
+
+@{
+    ViewData["Title"] = "مشاهده درخواست کاربر تجاری";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header row">
+    <div class="content-header-left col-12 my-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h5 class="content-header-title float-left">@ViewData["Title"]</h5>
+                <div class="breadcrumb-wrapper ">
+                    <ol class="breadcrumb p-0 pl-1 mb-0">
+                        <li class="breadcrumb-item">
+                            <a asp-controller="Home" asp-action="Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a asp-action="Index">مدیریت درخواست کاربر تجاری</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            @ViewData["Title"]
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-body">
+    <form asp-action="Save" asp-antiforgery="true" enctype="multipart/form-data">
+        @if (!Html.ViewData.ModelState.IsValid)
+        {
+            <div asp-validation-summary="All" class="alert alert-danger mb-2" role="alert">
+            </div>
+        }
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">نام شرکت</label>
+                                            <div class="custom-file">
+                                                <input type="text" class="form-control" asp-for="CompanyName">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">شماره ‌ثبت</label>
+                                            <div class="custom-file">
+                                                <input type="text" class="form-control" asp-for="RegistrationNumber">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">تاريخ ‌ثبت</label>
+                                            <div class="custom-file">
+                                                <input type="text" class="form-control" asp-for="RegistrationDate">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">محل ‌ثبت</label>
+                                            <div class="custom-file">
+                                                <input type="text" class="form-control" asp-for="RegistrationPlace">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">كد اقتصادي</label>
+                                            <div class="custom-file">
+                                                <input type="text" class="form-control" asp-for="EconomicCode">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">وب ‌سايت</label>
+                                            <div class="custom-file">
+                                                <input type="text" class="form-control" asp-for="WebsiteUrl">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">آدرس‌ ايميل</label>
+                                            <div class="custom-file">
+                                                <input type="text" class="form-control" asp-for="Email">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">نشاني ‌محل ‌فعاليت</label>
+                                            <div class="custom-file">
+                                                <input type="text" class="form-control" asp-for="ActivityAddress">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">نام ‌رابط</label>
+                                            <div class="custom-file">
+                                                <input type="text" class="form-control" asp-for="InterfaceName">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">نام‌خانوادگي ‌رابط</label>
+                                            <div class="custom-file">
+                                                <input type="text" class="form-control" asp-for="InterfaceFamily">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">سمت</label>
+                                            <div class="custom-file">
+                                                <input type="text" class="form-control" asp-for="Post">
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        @if (!Model.IsRejected && !Model.IsAccepted)
+        {
+            <div class="row">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success glow mr-1 mb-1" name="submit" value="Confirm">
+                        <span class="align-middle ml-25">تایید </span>
+                    </button>
+                    <button type="submit" class="btn btn-danger glow mr-1 mb-1" name="submit" value="Reject">
+                        <span class="align-middle ml-25">عدم تایید</span>
+                    </button>
+                </div>
+            </div>
+        }
+        @Html.HiddenFor(p => p.Id)
+        @Html.HiddenFor(p => p.PersonId)
+    </form>
+
+</div>
+@*@if (TempData["Message"] != null)
+    {
+        <script type="text/javascript">
+            $(document).ready(function () {
+                Swal.fire({
+                    text: '@TempData["Message"].ToString()',
+                    type: "@((bool)TempData["IsError"] == true ? "error" : "success")",
+                    confirmButtonClass: 'btn btn-primary',
+                    confirmButtonText: 'باشه',
+                    buttonsStyling: false,
+                });
+            })
+        </script>
+        //TempData["Message"] = null;
+        //TempData["IsError"] = false;
+    }*@

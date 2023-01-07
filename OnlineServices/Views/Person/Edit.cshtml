@@ -1,0 +1,245 @@
+﻿@model OnlineServices.Models.PersonModel
+
+@{
+    ViewData["Title"] = !string.IsNullOrEmpty(Model.Id) ? "ویرایش همکار" : "ثبت همکار جدید";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header row">
+    <div class="content-header-left col-12 my-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h5 class="content-header-title float-left">@ViewData["Title"]</h5>
+                <div class="breadcrumb-wrapper ">
+                    <ol class="breadcrumb p-0 pl-1 mb-0">
+                        <li class="breadcrumb-item">
+                            <a asp-controller="Home" asp-action="Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a asp-action="Index">مدیریت همکاران</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            @ViewData["Title"]
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-body">
+    <form asp-action="Save" asp-antiforgery="true">
+        @if (!Html.ViewData.ModelState.IsValid)
+        {
+            <div asp-validation-summary="All" class="alert alert-danger mb-2" role="alert">
+            </div>
+        }
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">اطلاعات هویتی</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label>نام</label>
+                                            <input type="text" class="form-control" asp-for="FirstName" placeholder="نام را وارد کنید" autocomplete="off">
+                                            <span asp-validation-for="FirstName" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label>نام خانوادگی</label>
+                                            <input type="text" class="form-control" asp-for="LastName" placeholder="نام خانوادگی را وارد کنید" autocomplete="off">
+                                            <span asp-validation-for="LastName" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label>کدملی</label>
+                                            <input type="text" class="form-control" asp-for="NationalCode" placeholder="کد ملی را وارد کنید" autocomplete="off">
+                                            <span asp-validation-for="NationalCode" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label>شماره کارمندی</label>
+                                            <input type="text" class="form-control" asp-for="EmployeeNo" placeholder="شماره کارمندی را وارد کنید" autocomplete="off">
+                                            <span asp-validation-for="EmployeeNo" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label>نوع همکار</label>
+                                            <select asp-for="PersonTypeId" name="PersonTypeId" class="select2 form-control select2-hidden-accessible select-is-required" asp-items="@Model.PersonTypeList">
+                                            </select>
+                                            <span asp-validation-for="PersonTypeId" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group position-relative has-icon-left with-label">
+                                            <label>شروع همکاری</label>
+                                            <input type="text" class="form-control shamsi-datepicker-list ltr-text" asp-for="CooperationStartDate" placeholder="13--/--/--" autocomplete="off">
+                                            <div class="form-control-position">
+                                                <i class="bx bx-calendar"></i>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group position-relative has-icon-left with-label">
+                                            <label>خاتمه همکاری</label>
+                                            <input type="text" class="form-control shamsi-datepicker-list ltr-text" asp-for="CooperationEndDate" placeholder="13--/--/--" autocomplete="off">
+                                            <div class="form-control-position">
+                                                <i class="bx bx-calendar"></i>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <fieldset class="form-group">
+                                            <label>وضعیت همکار</label>
+                                            <div class="checkbox checkbox-primary checkbox-glow d-block">
+                                                <input type="checkbox" asp-for="IsActive" checked="@(Model.IsActive == null || Model.IsActive == true ?"checked" : "")">
+                                                <label asp-for="IsActive">فعال</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">اطلاعات تماس</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <fieldset class="form-group">
+                                            <label>شماره موبایل</label>
+                                            <input type="text" class="form-control" asp-for="MobileNo" placeholder="شماره موبایل را وارد کنید" autocomplete="off">
+                                            <span asp-validation-for="MobileNo" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <fieldset class="form-group">
+                                            <label>شماره تلفن</label>
+                                            <input type="text" class="form-control" asp-for="PhoneNo" placeholder="شماره تلفن را وارد کنید" autocomplete="off">
+                                            @*<span asp-validation-for="PhoneNo" class="invalid-feedback"></span>*@
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <fieldset class="form-group">
+                                            <label>کد پستی</label>
+                                            <input type="text" class="form-control" asp-for="PostCode" placeholder="کد پستی را وارد کنید" autocomplete="off">
+                                            @*<span asp-validation-for="PostCode" class="invalid-feedback"></span>*@
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset class="form-group">
+                                            <label>آدرس</label>
+                                            <input type="text" class="form-control" asp-for="Address" placeholder="آدرس را وارد کنید" autocomplete="off">
+                                            <span asp-validation-for="Address" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">محل خدمت</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <fieldset class="form-group">
+                                            <label>استان</label>
+                                            <select asp-for="StateId" name="StateId" id="drpState" class="select2 form-control select2-hidden-accessible select-is-required" asp-items="@Model.StateList">
+                                            </select>
+                                            <span asp-validation-for="StateId" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <fieldset class="form-group">
+                                            <label>شهر</label>
+                                            <select asp-for="CityId" name="CityId" id="drpCity" class="select2 form-control select2-hidden-accessible select-is-required" asp-items="@Model.CityList">
+                                            </select>
+                                            <span asp-validation-for="CityId" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pnlServicesType" style="display:@(Model.PersonTypeId == 3 || Model.PersonTypeId == 4 ? "block":"none")">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">خدمات قابل ارائه توسط کارمند</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul class="list-unstyled mb-0">
+                                            @foreach (var item in Model.ServiceTypeList)
+                                            {
+                                                <li class="d-inline-block mr-2 mb-1">
+                                                    <fieldset>
+                                                        <div class="checkbox checkbox-primary checkbox-glow">
+                                                            <input type="checkbox" id="chkServiceType_@item.Value" value="@item.Value" name="PersonServiceIds" @(item.Selected ? "checked" : "")>
+                                                            <label for="chkServiceType_@item.Value">@item.Text</label>
+                                                        </div>
+                                                    </fieldset>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-success glow mr-1 mb-1">
+                    <i class="bx bx-check"></i>
+                    <span class="align-middle ml-25">ثبت اطلاعات</span>
+                </button>
+
+            </div>
+        </div>
+        @Html.HiddenFor(p => p.Id)
+    </form>
+</div>
+<script>
+    $(function () {
+        MainForm.initPersonEdit();
+    })
+</script>

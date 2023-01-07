@@ -1,0 +1,167 @@
+﻿@using OnlineServices.Entity
+@{
+    var currentController = ViewContext.RouteData.Values["Controller"];
+    var currentAction = ViewContext.RouteData.Values["Action"];
+    int currentBaseKindId = !string.IsNullOrEmpty(ViewContext.HttpContext.Request.Query["basekindid"]) ? Convert.ToInt32(ViewContext.HttpContext.Request.Query["basekindid"]) : 0;
+}
+<ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="">
+    <li class="nav-item @(currentController.ToString() == "Home"?"active":"")">
+        <a asp-controller="Home" asp-action="Index">
+            <i class="bx bxs-home"></i>
+            <span class="menu-title">کارتابل</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "Banners"&& (currentAction.ToString() == "Index" || currentAction.ToString() == "ShowBanner")?"active":"")">
+        <a asp-controller="Banners" asp-action="Index">
+            <i class="bx bxs-group"></i>
+            <span class="menu-title">لیست بنرها</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "Person"&& (currentAction.ToString() == "Index" || currentAction.ToString() == "Edit")?"active":"")">
+        <a asp-controller="Person" asp-action="Index">
+            <i class="bx bxs-group"></i>
+            <span class="menu-title">لیست پرسنل</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "Person" && (currentAction.ToString() == "Users" || currentAction.ToString() == "UserDetail")?"active":"")">
+        <a asp-controller="Person" asp-action="Users">
+            <i class="bx bxs-group"></i>
+            <span class="menu-title">لیست کاربران</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "PackageTemplate" && (currentAction.ToString() == "Index" || currentAction.ToString() == "Edit")?"active":"")">
+        <a asp-controller="PackageTemplate" asp-action="Index">
+            <i class="bx bxs-group"></i>
+            <span class="menu-title">لیست بسته‌ها</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "ServiceRequest" && (currentAction.ToString() == "Index" || currentAction.ToString() == "Edit")?"active":"")">
+        <a asp-controller="ServiceRequest" asp-action="Index">
+            <i class="bx bxs-group"></i>
+            <span class="menu-title">لیست درخواست‌ها</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "CommercialRequest" && (currentAction.ToString() == "Index" || currentAction.ToString() == "Edit")?"active":"")">
+        <a asp-controller="CommercialRequest" asp-action="Index">
+            <i class="bx bxs-group"></i>
+            <span class="menu-title">لیست درخواست‌ کاربر تجاری</span>
+        </a>
+    </li>
+    @*<li class="nav-item @(currentController.ToString() == "Message" && (currentAction.ToString() == "Index" || currentAction.ToString() == "Edit")?"active":"")">
+            <a asp-controller="Message" asp-action="Index">
+                <i class="bx bxs-group"></i>
+                <span class="menu-title">تماس‌های پشتیبانی</span>
+            </a>
+        </li>*@
+    @*<li class="nav-item @(currentController.ToString() == "ServiceCenter" && (currentAction.ToString() == "Index" || currentAction.ToString() == "Edit")?"active":"")">
+            <a asp-controller="ServiceCenter" asp-action="Index">
+                <i class="bx bxs-group"></i>
+                <span class="menu-title">لیست مراکز خدماتی</span>
+            </a>
+        </li>*@
+    <li class="navigation-header">
+        <span>اطلاعات پایه</span>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "PersonType"?"active":"")">
+        <a asp-controller="PersonType" asp-action="Index">
+            <i class="bx bxs-user-check"></i>
+            <span class="menu-title">مدیریت نوع همکاران</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "ServiceType" && (currentAction.ToString() == "Index")?"active":"")">
+        <a asp-controller="ServiceType" asp-action="Index">
+            <i class="bx bx-wrench"></i>
+            <span class="menu-title">مدیریت نوع خدمات</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "ServiceType" && (currentAction.ToString() == "UnitPrice" || currentAction.ToString() == "UnitPriceEdit")?"active":"")">
+        <a asp-controller="ServiceType" asp-action="UnitPrice">
+            <i class="bx bx-wrench"></i>
+            <span class="menu-title">قیمت گذاری واحد خدمات</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "Brand"?"active":"")">
+        <a asp-controller="Brand" asp-action="Index">
+            <i class="bx bx-wrench"></i>
+            <span class="menu-title">مدیریت برندها</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "Model"?"active":"")">
+        <a asp-controller="Model" asp-action="Index">
+            <i class="bx bx-wrench"></i>
+            <span class="menu-title">مدیریت مدل‌ها</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "ServiceTypeQuestion"?"active":"")">
+        <a asp-controller="ServiceTypeQuestion" asp-action="Index">
+            <i class="bx bx-wrench"></i>
+            <span class="menu-title">مدیریت سوالات نظرسنجی</span>
+        </a>
+    </li>
+    <li class="nav-item @(currentController.ToString() == "ServiceTypeQuestion"?"active":"")">
+        <a asp-controller="Ticket" asp-action="Index">
+            <i class="bx bx-wrench"></i>
+            <span class="menu-title">مدیریت تیکت ها</span>
+        </a>
+    </li>
+    <li class="nav-item has-sub @(currentBaseKindId != 0 ? (currentBaseKindId== Convert.ToInt32(BaseKindEnum.TechnicalSpecificationItems)
+    || currentBaseKindId == Convert.ToInt32(BaseKindEnum.TypesOfCarWashServicesWithOutWater)
+    || currentBaseKindId == Convert.ToInt32(BaseKindEnum.TypesOfCarWashServicesWithWater)
+    || currentBaseKindId == Convert.ToInt32(BaseKindEnum.TypesOfRepairServices)
+    || currentBaseKindId == Convert.ToInt32(BaseKindEnum.TypesOfCarServiceCenters)
+    || currentBaseKindId == Convert.ToInt32(BaseKindEnum.TypesOfAccessoryCenters))
+    ? "sidebar-group-active open" : "": ""
+    )">
+        <a href="javascript:">
+            <i class="bx bx-file"></i>
+            <span class="menu-title" data-i18n="Invoice">سایر اطلاعات پایه</span>
+        </a>
+        <ul class="menu-content" style="">
+            <li class="@(currentBaseKindId== Convert.ToInt32(BaseKindEnum.TechnicalSpecificationItems)?"active":"")">
+                <a asp-controller="Base" asp-action="Index" asp-route-basekindid="@Convert.ToInt32(BaseKindEnum.TechnicalSpecificationItems)">
+                    <i class="bx bx-file"></i>
+                    <span class="menu-item">آیتم های مشخصات فنی</span>
+                </a>
+
+            </li>
+            <li class="has-sub @(currentBaseKindId== Convert.ToInt32(BaseKindEnum.TypesOfCarWashServicesWithOutWater) ||currentBaseKindId== Convert.ToInt32(BaseKindEnum.TypesOfCarWashServicesWithWater) ?"open":"")">
+                <a href="javascript:">
+                    <i class="bx bx-file"></i>
+                    <span class="menu-item">انواع خدمات کارواش</span>
+                </a>
+                <ul class="menu-content" style="">
+                    <li class="@(currentBaseKindId== Convert.ToInt32(BaseKindEnum.TypesOfCarWashServicesWithOutWater)?"active":"")">
+                        <a asp-controller="Base" asp-action="Index" asp-route-basekindid="@Convert.ToInt32(BaseKindEnum.TypesOfCarWashServicesWithOutWater)">
+                            <i class="bx bx-file"></i>
+                            <span class="menu-item">کارواش بدون آب</span>
+                        </a>
+                    </li>
+                    <li class="@(currentBaseKindId== Convert.ToInt32(BaseKindEnum.TypesOfCarWashServicesWithWater)?"active":"")">
+                        <a asp-controller="Base" asp-action="Index" asp-route-basekindid="@Convert.ToInt32(BaseKindEnum.TypesOfCarWashServicesWithWater)">
+                            <i class="bx bx-file"></i>
+                            <span class="menu-item">کارواش با آب</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="@(currentBaseKindId== Convert.ToInt32(BaseKindEnum.TypesOfRepairServices)?"active":"")">
+                <a asp-controller="Base" asp-action="Index" asp-route-basekindid="@Convert.ToInt32(BaseKindEnum.TypesOfRepairServices)">
+                    <i class="bx bx-file"></i>
+                    <span class="menu-item">انواع خدمات تعمیرگاه</span>
+                </a>
+            </li>
+            <li class="@(currentBaseKindId== Convert.ToInt32(BaseKindEnum.TypesOfCarServiceCenters)?"active":"")">
+                <a asp-controller="Base" asp-action="Index" asp-route-basekindid="@Convert.ToInt32(BaseKindEnum.TypesOfCarServiceCenters)">
+                    <i class="bx bx-file"></i>
+                    <span class="menu-item">انواع خدمات مراکز خدمات خودرو</span>
+                </a>
+            </li>
+            <li class="@(currentBaseKindId == Convert.ToInt32(BaseKindEnum.TypesOfAccessoryCenters)?"active":"")">
+                <a asp-controller="Base" asp-action="Index" asp-route-basekindid="@Convert.ToInt32(BaseKindEnum.TypesOfAccessoryCenters)">
+                    <i class="bx bx-file"></i>
+                    <span class="menu-item">انواع خدمات یدکی</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>

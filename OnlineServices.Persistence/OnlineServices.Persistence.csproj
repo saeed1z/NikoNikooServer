@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200810144816_repeate-add-brand-model-package.cs" />
+    <Compile Remove="Migrations\20200810144816_repeate-add-brand-model-package.Designer.cs" />
+    <Compile Remove="Migrations\20200810145053_repeate-add-brand-model-package2.cs" />
+    <Compile Remove="Migrations\20200810145053_repeate-add-brand-model-package2.Designer.cs" />
+    <Compile Remove="Migrations\20200810145306_re-add-brand-model-package.cs" />
+    <Compile Remove="Migrations\20200810145306_re-add-brand-model-package.Designer.cs" />
+    <Compile Remove="Migrations\20200810183753_re-add-personpackage-personcar.cs" />
+    <Compile Remove="Migrations\20200810183753_re-add-personpackage-personcar.Designer.cs" />
+    <Compile Remove="Migrations\20200811155100_edit-entity.cs" />
+    <Compile Remove="Migrations\20200811155100_edit-entity.Designer.cs" />
+    <Compile Remove="Migrations\20200811155431_edit-entity.cs" />
+    <Compile Remove="Migrations\20200811155431_edit-entity.Designer.cs" />
+    <Compile Remove="Migrations\20200830132629_updateservicerequest.cs" />
+    <Compile Remove="Migrations\20200830132629_updateservicerequest.Designer.cs" />
+    <Compile Remove="Migrations\20200830133952_updateservicerequest.cs" />
+    <Compile Remove="Migrations\20200830133952_updateservicerequest.Designer.cs" />
+    <Compile Remove="Migrations\20200830135018_updateservicerequest.cs" />
+    <Compile Remove="Migrations\20200830135018_updateservicerequest.Designer.cs" />
+    <Compile Remove="Migrations\20201001073344_add entitle and cartypebaseid to model.cs" />
+    <Compile Remove="Migrations\20201001073344_add entitle and cartypebaseid to model.Designer.cs" />
+    <Compile Remove="Migrations\20201001075758_update cartype model.cs" />
+    <Compile Remove="Migrations\20201001075758_update cartype model.Designer.cs" />
+    <Compile Remove="Migrations\20201001075939_update cartype model.cs" />
+    <Compile Remove="Migrations\20201001075939_update cartype model.Designer.cs" />
+    <Compile Remove="Migrations\20210126061421_add ServiceTypeQuestion and survey model.cs" />
+    <Compile Remove="Migrations\20210126061421_add ServiceTypeQuestion and survey model.Designer.cs" />
+    <Compile Remove="Migrations\20210315063738_add personcarid to personpackage.cs" />
+    <Compile Remove="Migrations\20210315063738_add personcarid to personpackage.Designer.cs" />
+    <Compile Remove="Migrations\20210315065430_add personcarid to personpackage1.cs" />
+    <Compile Remove="Migrations\20210315065430_add personcarid to personpackage1.Designer.cs" />
+    <Compile Remove="Migrations\20210509060313_init-tickets.cs" />
+    <Compile Remove="Migrations\20210509060313_init-tickets.Designer.cs" />
+    <Compile Remove="Migrations\20210509060635_init-tickets.cs" />
+    <Compile Remove="Migrations\20210509060635_init-tickets.Designer.cs" />
+    <Compile Remove="Migrations\20210607115112_factor-pending-prop-added-to-service-request-model.cs" />
+    <Compile Remove="Migrations\20210607115112_factor-pending-prop-added-to-service-request-model.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineServices.Entity\OnlineServices.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

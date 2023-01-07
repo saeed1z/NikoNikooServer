@@ -1,0 +1,31 @@
+﻿<config>
+	<domain>https://api.karmandet.com</domain>
+
+<domain>https://api.karmandet.com</domain>
+
+	<fileDomain>https://panel.karmandet.com</fileDomain>
+
+
+
+	<SliderImageItem>https://panel.karmandet.com/Uploads/banners/</SliderImageItem>
+	<Filesuploader>https://panel.karmandet.com/Uploads/ServiceRequestFile/</Filesuploader>
+
+
+	<maximomStageWidth>0</maximomStageWidth>
+	<maximomStageHeight>0</maximomStageHeight>
+	
+	<debugStageHeight>0</debugStageHeight>
+	<debugStageWidth>0</debugStageWidth>
+	
+	<debug1>false</debug1>
+	<debug2>false</debug2>
+	<debug3>false</debug3>
+	<debug4>false</debug4>
+	
+	<internal_menu_height_top>0</internal_menu_height_top>
+	<internal_menu_height_bottom>0</internal_menu_height_bottom>
+	<internal_menu_width_left>0</internal_menu_width_left>
+	<internal_menu_width_right>0</internal_menu_width_right>
+	
+	<skipAnimations>false</skipAnimations>
+</config>

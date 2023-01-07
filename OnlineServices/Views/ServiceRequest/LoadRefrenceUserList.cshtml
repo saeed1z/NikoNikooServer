@@ -1,0 +1,223 @@
+﻿@model OnlineServices.Models.RefrencePersonListModel
+@using OnlineServices.Utilities.Extensions
+
+@{
+    Layout = null;
+}
+<div class="card">
+    <div class="card-content">
+        <div class="card-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item current">
+                    <a class="nav-link active" id="export-tab" data-toggle="tab" href="#expert" aria-controls="export" role="tab" aria-selected="true">
+                        <i class="bx bx-user align-middle"></i>
+                        <span class="align-middle">لیست کارشناسان</span>
+                    </a>
+                </li>
+                @*<li class="nav-item">
+                    <a class="nav-link" id="employee-tab" data-toggle="tab" href="#employee" aria-controls="employee" role="tab" aria-selected="false">
+                        <i class="bx bx-user align-middle"></i>
+                        <span class="align-middle">لیست رانندگان</span>
+                    </a>
+                </li>*@
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="expert" aria-labelledby="expert-tab" role="tabpanel">
+                    <table class="table mb-0 line-height-2">
+                        <thead>
+                            <tr>
+                                <th>
+                                    نام
+                                </th>
+                                <th>
+                                    نام خانوادگی
+                                </th>
+                                <th>
+                                    نوع کارمند
+                                </th>
+                                <th>
+                                    شماره کارمند
+                                </th>
+                                <th>
+                                    شماره موبایل
+                                </th>
+                                <th>
+                                    وضعیت
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.ExpertPersonModel.Count > 0)
+                            {
+                                foreach (var item in Model.ExpertPersonModel)
+                                {
+                                    <tr>
+                                        <td>
+                                            @item.FirstName
+                                        </td>
+                                        <td>
+                                            @item.LastName
+                                        </td>
+                                        <td>
+                                            @item.PersonTypeTitle
+                                        </td>
+                                        <td>
+                                            @item.EmployeeNo
+                                        </td>
+                                        <td>
+                                            @item.MobileNo
+                                        </td>
+                                        <td class="@(item.IsActive ? "text-success" : "text-danger")">
+                                            @(item.IsActive ? "فعال" : "غیرفعال")
+                                        </td>
+                                        <td>
+                                            @if (Model.ServiceRequest.ExpertId != null) // درخواست ارجاع شده
+                                            {
+                                                if (Model.ServiceRequest.ExpertId == System.Xml.XmlConvert.ToGuid(item.Id)) // به کاربر جاری ارجاع شده
+                                                {
+                                                    <span class="badge
+                                                          @((Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.AcceptanceRequestByEmployee
+                                                        || Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.EndOfServiceAndDeliveryToUser)?
+                                                        "badge-light-success":
+                                                        (Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.CancelRequestByEmployee || Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.CancelRequestByUser)?
+                                                        "badge-light-danger":
+                                                        "badge-light-primary")">
+                                                        @Model.ServiceRequest.LastStatus.Title
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    if (Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.WaitingAcceptanceByEmployee ||
+                                                        Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.CancelRequestByEmployee)
+                                                    {
+                                                        <a href="javascript:" data-personid="@item.Id" data-persontypeid="@item.PersonTypeId"
+                                                           class="btn btn-dark mr-1 mb-1 submuit-refrence">
+                                                            ارجاع
+                                                        </a>
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <a href="javascript:" data-personid="@item.Id" data-persontypeid="@item.PersonTypeId"
+                                                   class="btn btn-dark mr-1 mb-1 submuit-refrence">
+                                                    ارجاع
+                                                </a>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="7" class="text-center">
+                                        اطلاعاتی جهت نمایش موجود نمی باشد
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane" id="employee" aria-labelledby="employee-tab" role="tabpanel">
+                    <table class="table mb-0 line-height-2">
+                        <thead>
+                            <tr>
+                                <th>
+                                    نام
+                                </th>
+                                <th>
+                                    نام خانوادگی
+                                </th>
+                                <th>
+                                    نوع کارمند
+                                </th>
+                                <th>
+                                    شماره کارمند
+                                </th>
+                                <th>
+                                    شماره موبایل
+                                </th>
+                                <th>
+                                    وضعیت
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.EmployeePersonModel.Count > 0)
+                            {
+                                foreach (var item in Model.EmployeePersonModel)
+                                {
+                                    <tr>
+                                        <td>
+                                            @item.FirstName
+                                        </td>
+                                        <td>
+                                            @item.LastName
+                                        </td>
+                                        <td>
+                                            @item.PersonTypeTitle
+                                        </td>
+                                        <td>
+                                            @item.EmployeeNo
+                                        </td>
+                                        <td>
+                                            @item.MobileNo
+                                        </td>
+                                        <td class="@(item.IsActive ? "text-success" : "text-danger")">
+                                            @(item.IsActive ? "فعال" : "غیرفعال")
+                                        </td>
+                                        <td>
+                                            @if (Model.ServiceRequest.EmployeeId != null) // درخواست ارجاع شده
+                                            {
+                                                if (Model.ServiceRequest.EmployeeId == System.Xml.XmlConvert.ToGuid(item.Id)) // به کاربر جاری ارجاع شده
+                                                {
+                                                    <span class="badge
+                                                          @((Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.AcceptanceRequestByEmployee
+                                                        || Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.EndOfServiceAndDeliveryToUser)?
+                                                        "badge-light-success":
+                                                        (Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.CancelRequestByEmployee || Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.CancelRequestByUser)?
+                                                        "badge-light-danger":
+                                                        "badge-light-primary")">@Model.ServiceRequest.LastStatus.Title</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        if (Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.WaitingAcceptanceByEmployee ||
+                                                            Model.ServiceRequest.LastStatusId == (int)OnlineServices.Entity.StatusEnum.CancelRequestByEmployee)
+                                                        {
+                                                            <a href="javascript:" data-personid="@item.Id" data-persontypeid="@item.PersonTypeId"
+                                                               class="btn btn-dark mr-1 mb-1 submuit-refrence">
+                                                                ارجاع
+                                                            </a>
+                                                        }
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <a href="javascript:" data-personid="@item.Id" data-persontypeid="@item.PersonTypeId"
+                                                       class="btn btn-dark mr-1 mb-1 submuit-refrence">
+                                                        ارجاع
+                                                    </a>
+                                                }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="7" class="text-center">
+                                        اطلاعاتی جهت نمایش موجود نمی باشد
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,17 @@
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Core.deps.json
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Core.dll
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Core.pdb
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Entity.dll
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.dll
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.ViewModel.dll
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Entity.pdb
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.pdb
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.ViewModel.pdb
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.csproj.AssemblyReference.cache
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.AssemblyInfoInputs.cache
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.AssemblyInfo.cs
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.csproj.CoreCompileInputs.cache
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.csproj.CopyComplete
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.dll
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.pdb

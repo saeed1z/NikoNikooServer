@@ -1,0 +1,172 @@
+﻿@model OnlineServices.Models.ModelListModel
+@using OnlineServices.Utilities.Extensions
+
+@{
+    ViewData["Title"] = "مدیریت مدل‌ها";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="modal fade text-left w-100" id="divModelGalleryListModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">گالری تصاویر</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="بستن">
+                    <i class="bx bx-x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="divModelGalleryList"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade text-left w-100" id="divModelGalleryModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">انتخاب تصویر</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="بستن">
+                    <i class="bx bx-x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="divModelGallery"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-header row">
+    <div class="content-header-left col-12 my-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h5 class="content-header-title float-left">@ViewData["Title"]</h5>
+                <div class="breadcrumb-wrapper ">
+                    <ol class="breadcrumb p-0 pl-1 mb-0">
+                        <li class="breadcrumb-item">
+                            <a asp-controller="Home" asp-action="Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            @ViewData["Title"]
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-body">
+    <section id="brand-list-content">
+        <div class="row">
+            <div class="col-12">
+                <a asp-action="Edit" class="btn btn-primary mr-1 mb-1">ثبت مدل جدید</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content table-responsive">
+                        <table class="table mb-0 line-height-1">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ردیف
+                                    </th>
+                                    <th>
+                                        تصویر
+                                    </th>
+                                    <th>
+                                        نوع خودرو
+                                    </th>
+                                    <th>
+                                        برند
+                                    </th>
+                                    <th>
+                                        عنوان
+                                    </th>
+                                    <th>
+                                        عنوان انگلیسی
+                                    </th>
+                                    <th>
+                                        قیمت
+                                    </th>
+                                    <th>
+                                        وضعیت
+                                    </th>
+                                    <th>مشخصات</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.ModelModel)
+                                {
+                                <tr>
+                                    <td>
+                                        @item.RowNum
+                                    </td>
+                                    <td>
+                                        <img src="~/Uploads/Model/@item.ModelFile"
+                                             class="mx-w-40"
+                                             asp-append-version="true" />
+                                    </td>
+                                    <td>
+                                        @item.CarTypeBaseTitle
+                                    </td>
+                                    <td>
+                                        @item.BrandTitle
+                                    </td>
+                                    <td>
+                                        @item.Title
+                                    </td>
+                                    <td>
+                                        @item.EnTitle
+                                    </td>
+                                    <td>
+                                        @item.Price
+                                    </td>
+
+                                    <td class="@(item.IsActive ? "text-success" : "text-danger")">
+                                        @(item.IsActive ? "فعال" : "غیرفعال")
+                                    </td>
+                                    <td>
+                                        <a asp-action="TechnicalInfo" asp-route-id="@item.Id" data-toggle="tooltip" title="مشخصات فنی">
+                                            <i class="badge-circle badge-circle-light-secondary bx bx-file font-medium-1"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a class="model-gallery-list cursor-pointer" data-modelid="@item.Id" data-toggle="tooltip" title="گالری تصاویر">
+                                            <i class="badge-circle badge-circle-light-secondary bx bxs-file-image font-medium-1"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.Id" data-toggle="tooltip" title="ویرایش">
+                                            <i class="badge-circle badge-circle-light-secondary bx bxs-pencil font-medium-1"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" data-toggle="tooltip" class="delete-confirm" title="حذف">
+                                            <i class="badge-circle badge-circle-light-danger bx bxs-trash-alt font-medium-1"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    @{
+                        var pager = Html.Pager(Model.PagerModel);
+                    }
+                    <div class="pager">
+                        @pager
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    $(function () {
+        MainForm.initModelList();
+    })
+</script>

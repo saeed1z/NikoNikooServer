@@ -1,0 +1,141 @@
+﻿@model OnlineServices.Models.TechnicalInfoModel
+
+@{
+    ViewData["Title"] = "مشخصات فنی مدل " + Model.ModelTitle;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header row">
+    <div class="content-header-left col-12 my-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h5 class="content-header-title float-left">@ViewData["Title"]</h5>
+                <div class="breadcrumb-wrapper ">
+                    <ol class="breadcrumb p-0 pl-1 mb-0">
+                        <li class="breadcrumb-item">
+                            <a asp-controller="Home" asp-action="Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a asp-action="Index">مدیریت مدل‌ها</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            @ViewData["Title"]
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-body">
+    <form asp-action="SaveTechnicalInfo" asp-antiforgery="true">
+        @if (!Html.ViewData.ModelState.IsValid)
+        {
+            <div asp-validation-summary="All" class="alert alert-danger mb-2" role="alert">
+            </div>
+        }
+    <section>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <fieldset class="form-group">
+                                        <label>عنوان مدل</label>
+                                        <input type="text" class="form-control" asp-for="ModelTitle" autocomplete="off" disabled>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-3">
+                                    <fieldset class="form-group">
+                                        <label>عنوان انگلیسی مدل</label>
+                                        <input type="text" class="form-control" asp-for="ModelEnTitle" autocomplete="off" disabled>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-3">
+                                    <fieldset class="form-group">
+                                        <label>نوع خودرو</label>
+                                        <input type="text" class="form-control" asp-for="ModelCarTypeTitle" autocomplete="off" disabled>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-3">
+                                    <fieldset class="form-group">
+                                        <label>وضعیت</label>
+                                        <div class="checkbox checkbox-primary checkbox-glow d-block">
+                                            <input type="checkbox" asp-for="ModelIsActive" disabled>
+                                            <label asp-for="ModelIsActive">فعال</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset class="form-group">
+                                        <label>نقد و بررسی</label>
+                                        <textarea class="form-control" asp-for="ModelDescription" rows="2" disabled></textarea>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content table-responsive">
+                        <table class="table mb-0 line-height-1">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        عنوان مشخصه
+                                    </th>
+                                    <th>
+                                        مقدار
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model.TechnicalInfoParametersModelList.Count > 0)
+                                {
+                                    for (var i = 0; i < Model.TechnicalInfoParametersModelList.Count; i++)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayName(Model.TechnicalInfoParametersModelList[i].BaseTitle)
+                                            </td>
+                                            <td>
+                                                @Html.TextBoxFor(m => m.TechnicalInfoParametersModelList[i].Value, new { @class = "form-control", @Value = Model.TechnicalInfoParametersModelList[i].Value })
+                                                @Html.HiddenFor(m => m.TechnicalInfoParametersModelList[i].BaseId)
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="2">
+                                            هیچ آیتمی موجود نمی باشد
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-success glow mr-1 mb-1">
+                    <i class="bx bx-check"></i>
+                    <span class="align-middle ml-25">ثبت اطلاعات</span>
+                </button>
+
+            </div>
+        </div>
+        @Html.HiddenFor(p => p.ModelId)
+    </form>
+</div>

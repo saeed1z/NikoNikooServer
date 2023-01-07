@@ -1,0 +1,374 @@
+<?xml version="1.0" ?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+    <versions>
+        <swc version="1.2"/>
+        <compiler name="ActionScript Compiler" version="2.0.0" build="1234 "/>
+    </versions>
+    <features>
+        <feature-script-deps/>
+    </features>
+    <libraries>
+        <library path="library.swf">
+            <script name="com/distriqt/extension/mediaplayer/Const" mod="1646798095383">
+                <def id="com.distriqt.extension.mediaplayer:Const"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/MediaInfo" mod="1636945177685">
+                <def id="com.distriqt.extension.mediaplayer:MediaInfo"/>
+                <dep id="Number" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.display:BitmapData" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/MediaPlayer" mod="1636945177647">
+                <def id="com.distriqt.extension.mediaplayer:MediaPlayer"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="JSON" type="e"/>
+                <dep id="Object" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:Const" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer:MediaPlayerOptions" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:MediaPlayerView" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:MediaUtils" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:RemoteCommandCenter" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:SystemControl" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:_AudioPlayerImpl" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer:_MediaPlayerLegacy" type="i"/>
+                <dep id="com.distriqt.extension.mediaplayer:_MediaPlayerViewImpl" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer:_MediaUtilsImpl" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer:_RemoteCommandCenterImpl" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer:_SoundPoolImpl" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer:_SystemControlImpl" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.audio:AudioPlayer" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer.audio:AudioPlayerOptions" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer.events:MediaErrorEvent" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.events:MediaPlayerEvent" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.events:MediaProgressEvent" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.sound:SoundPool" type="s"/>
+                <dep id="flash.events:ErrorEvent" type="e"/>
+                <dep id="flash.events:StatusEvent" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/MediaPlayerOptions" mod="1646797836772">
+                <def id="com.distriqt.extension.mediaplayer:MediaPlayerOptions"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.geom:Rectangle" type="s"/>
+                <dep id="int" type="e"/>
+                <dep id="uint" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/MediaPlayerView" mod="1636945177562">
+                <def id="com.distriqt.extension.mediaplayer:MediaPlayerView"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Number" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:IEventDispatcher" type="i"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/MediaUtils" mod="1636945177627">
+                <def id="com.distriqt.extension.mediaplayer:MediaUtils"/>
+                <dep id="Number" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:IEventDispatcher" type="i"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/RemoteCommandCenter" mod="1636945177692">
+                <def id="com.distriqt.extension.mediaplayer:RemoteCommandCenter"/>
+                <dep id="com.distriqt.extension.mediaplayer:MediaInfo" type="s"/>
+                <dep id="flash.events:IEventDispatcher" type="i"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/SystemControl" mod="1636945177660">
+                <def id="com.distriqt.extension.mediaplayer:SystemControl"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Object" type="i"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/_AIRSoundChannelImpl" mod="1636945177596">
+                <def id="com.distriqt.extension.mediaplayer:_AIRSoundChannelImpl"/>
+                <dep id="Function" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer.sound:SoundChannel" type="i"/>
+                <dep id="flash.events:Event" type="s"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.media:SoundChannel" type="s"/>
+                <dep id="flash.media:SoundTransform" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/_AIRSoundImpl" mod="1636945177654">
+                <def id="com.distriqt.extension.mediaplayer:_AIRSoundImpl"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="Number" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:_AIRSoundChannelImpl" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.sound:Sound" type="i"/>
+                <dep id="com.distriqt.extension.mediaplayer.sound:SoundChannel" type="s"/>
+                <dep id="flash.errors:IOError" type="e"/>
+                <dep id="flash.events:Event" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:IOErrorEvent" type="e"/>
+                <dep id="flash.filesystem:File" type="s"/>
+                <dep id="flash.media:Sound" type="s"/>
+                <dep id="flash.media:SoundTransform" type="s"/>
+                <dep id="flash.net:URLRequest" type="e"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/_AudioPlayerImpl" mod="1646797836773">
+                <def id="com.distriqt.extension.mediaplayer:_AudioPlayerImpl"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="JSON" type="e"/>
+                <dep id="Number" type="s"/>
+                <dep id="Object" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer.audio:AudioPlayer" type="i"/>
+                <dep id="com.distriqt.extension.mediaplayer.audio:AudioPlayerOptions" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer.events:AudioPlayerEvent" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.events:MediaErrorEvent" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.events:MediaProgressEvent" type="e"/>
+                <dep id="flash.errors:IOError" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:StatusEvent" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="flash.filesystem:File" type="s"/>
+                <dep id="flash.utils:ByteArray" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/_MediaPlayerLegacy" mod="1636945177793">
+                <def id="com.distriqt.extension.mediaplayer:_MediaPlayerLegacy"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Number" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:MediaPlayerOptions" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer:MediaPlayerView" type="i"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/_MediaPlayerViewImpl" mod="1636945177786">
+                <def id="com.distriqt.extension.mediaplayer:_MediaPlayerViewImpl"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="JSON" type="e"/>
+                <dep id="Number" type="s"/>
+                <dep id="Object" type="e"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:MediaPlayerOptions" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:MediaPlayerView" type="i"/>
+                <dep id="com.distriqt.extension.mediaplayer.events:MediaErrorEvent" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.events:MediaPlayerEvent" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.events:MediaProgressEvent" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:StatusEvent" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/_MediaUtilsImpl" mod="1636945177550">
+                <def id="com.distriqt.extension.mediaplayer:_MediaUtilsImpl"/>
+                <dep id="Error" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="JSON" type="e"/>
+                <dep id="Number" type="s"/>
+                <dep id="Object" type="e"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:MediaUtils" type="i"/>
+                <dep id="com.distriqt.extension.mediaplayer.events:MediaThumbnailEvent" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.utils:Base64" type="e"/>
+                <dep id="flash.display:BitmapData" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:StatusEvent" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="flash.geom:Rectangle" type="e"/>
+                <dep id="flash.utils:ByteArray" type="e"/>
+                <dep id="int" type="s"/>
+                <dep id="trace" type="e"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/_RemoteCommandCenterImpl" mod="1636945177640">
+                <def id="com.distriqt.extension.mediaplayer:_RemoteCommandCenterImpl"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="JSON" type="e"/>
+                <dep id="Object" type="e"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:MediaInfo" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:RemoteCommandCenter" type="i"/>
+                <dep id="com.distriqt.extension.mediaplayer.events:RemoteCommandCenterEvent" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:StatusEvent" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/_SoundChannelImpl" mod="1636945177544">
+                <def id="com.distriqt.extension.mediaplayer:_SoundChannelImpl"/>
+                <dep id="Error" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="JSON" type="e"/>
+                <dep id="Object" type="e"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer.sound:SoundChannel" type="i"/>
+                <dep id="flash.events:Event" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:StatusEvent" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="flash.media:SoundTransform" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/_SoundImpl" mod="1636945177538">
+                <def id="com.distriqt.extension.mediaplayer:_SoundImpl"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Function" type="s"/>
+                <dep id="JSON" type="e"/>
+                <dep id="Number" type="s"/>
+                <dep id="Object" type="e"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:_SoundChannelImpl" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.sound:Sound" type="i"/>
+                <dep id="com.distriqt.extension.mediaplayer.sound:SoundChannel" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer.utils:FileUtils" type="e"/>
+                <dep id="flash.errors:IOError" type="e"/>
+                <dep id="flash.events:Event" type="e"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:IOErrorEvent" type="e"/>
+                <dep id="flash.events:StatusEvent" type="e"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="flash.filesystem:File" type="s"/>
+                <dep id="flash.media:SoundTransform" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/_SoundPoolImpl" mod="1636945177704">
+                <def id="com.distriqt.extension.mediaplayer:_SoundPoolImpl"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:_AIRSoundImpl" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer:_SoundImpl" type="e"/>
+                <dep id="com.distriqt.extension.mediaplayer.sound:Sound" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer.sound:SoundPool" type="i"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/_SystemControlImpl" mod="1636945177633">
+                <def id="com.distriqt.extension.mediaplayer:_SystemControlImpl"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Error" type="e"/>
+                <dep id="Object" type="e"/>
+                <dep id="String" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer:SystemControl" type="i"/>
+                <dep id="flash.events:EventDispatcher" type="i"/>
+                <dep id="flash.events:StatusEvent" type="s"/>
+                <dep id="flash.external:ExtensionContext" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/audio/AudioPlayer" mod="1646798079387">
+                <def id="com.distriqt.extension.mediaplayer.audio:AudioPlayer"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Number" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:IEventDispatcher" type="i"/>
+                <dep id="flash.filesystem:File" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/audio/AudioPlayerOptions" mod="1636945177676">
+                <def id="com.distriqt.extension.mediaplayer.audio:AudioPlayerOptions"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/events/AudioPlayerEvent" mod="1636945177727">
+                <def id="com.distriqt.extension.mediaplayer.events:AudioPlayerEvent"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Number" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/events/MediaErrorEvent" mod="1636945177714">
+                <def id="com.distriqt.extension.mediaplayer.events:MediaErrorEvent"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/events/MediaPlayerEvent" mod="1636945177740">
+                <def id="com.distriqt.extension.mediaplayer.events:MediaPlayerEvent"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/events/MediaProgressEvent" mod="1636945177746">
+                <def id="com.distriqt.extension.mediaplayer.events:MediaProgressEvent"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Number" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/events/MediaThumbnailEvent" mod="1636945177734">
+                <def id="com.distriqt.extension.mediaplayer.events:MediaThumbnailEvent"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.display:BitmapData" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/events/RemoteCommandCenterEvent" mod="1636945177720">
+                <def id="com.distriqt.extension.mediaplayer.events:RemoteCommandCenterEvent"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Number" type="s"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.events:Event" type="i"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/sound/Sound" mod="1636945177770">
+                <def id="com.distriqt.extension.mediaplayer.sound:Sound"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Number" type="s"/>
+                <dep id="com.distriqt.extension.mediaplayer.sound:SoundChannel" type="s"/>
+                <dep id="flash.events:IEventDispatcher" type="i"/>
+                <dep id="flash.filesystem:File" type="s"/>
+                <dep id="flash.media:SoundTransform" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/sound/SoundChannel" mod="1636945177758">
+                <def id="com.distriqt.extension.mediaplayer.sound:SoundChannel"/>
+                <dep id="flash.events:IEventDispatcher" type="i"/>
+                <dep id="flash.media:SoundTransform" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/sound/SoundPool" mod="1636945177764">
+                <def id="com.distriqt.extension.mediaplayer.sound:SoundPool"/>
+                <dep id="Boolean" type="s"/>
+                <dep id="Object" type="i"/>
+                <dep id="com.distriqt.extension.mediaplayer.sound:Sound" type="s"/>
+                <dep id="int" type="s"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/utils/Base64" mod="1636945177612">
+                <def id="com.distriqt.extension.mediaplayer.utils:Base64"/>
+                <dep id="Array" type="e"/>
+                <dep id="Error" type="e"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.utils:ByteArray" type="s"/>
+                <dep id="uint" type="e"/>
+            </script>
+            <script name="com/distriqt/extension/mediaplayer/utils/FileUtils" mod="1636945177618">
+                <def id="com.distriqt.extension.mediaplayer.utils:FileUtils"/>
+                <dep id="Array" type="e"/>
+                <dep id="Function" type="e"/>
+                <dep id="Object" type="i"/>
+                <dep id="String" type="s"/>
+                <dep id="flash.filesystem:File" type="s"/>
+                <dep id="flash.filesystem:FileMode" type="e"/>
+                <dep id="flash.filesystem:FileStream" type="e"/>
+                <dep id="flash.utils:ByteArray" type="e"/>
+            </script>
+            <digests>
+                <digest type="SHA-256" signed="false" value="8ed33e82e882ca0764a131543cef99715db3070dae966244f82d5b236eccec11"/>
+            </digests>
+        </library>
+    </libraries>
+</swc>

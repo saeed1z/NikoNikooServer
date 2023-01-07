@@ -1,0 +1,95 @@
+﻿@model OnlineServices.Models.ServiceRequestListModel
+@using OnlineServices.Utilities.Extensions
+
+@{
+    Layout = null;
+}
+<div class="card-content table-responsive">
+    <table class="table mb-0 line-height-2">
+        <thead>
+            <tr>
+                <th>
+                    ردیف
+                </th>
+                <th>
+                    نوع خدمت
+                </th>
+                <th>
+                    درخواست کننده
+                </th>
+                <th>
+                    تاریخ درخواست
+                </th>
+                <th>
+                    از
+                </th>
+                <th>
+                    به
+                </th>
+                <th>
+                    وضعیت
+                </th>
+                <th>
+                    توضیحات
+                </th>
+                <th>
+
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ServiceRequestModel)
+            {
+                <tr>
+                    <td>
+                        @item.RowNum
+                    </td>
+                    <td>
+                        @item.ServiceTypeTitle
+                    </td>
+                    <td>
+                        @item.PersonName
+                    </td>
+                    <td>
+                        @item.RequestDateTime
+                    </td>
+                    <td>
+                        @item.SourceStateTitle &nbsp; @item.SourceCityTitle
+                    </td>
+                    <td>
+                        @item.DestinationStateTitle &nbsp; @item.DestinationCityTitle
+                    </td>
+                    <td>
+                        @item.LastStatusTitle
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                    <td>
+                        @if(item.LastStatusId == (int)OnlineServices.Entity.StatusEnum.RequestServiceByUser ||
+                            item.LastStatusId == (int)OnlineServices.Entity.StatusEnum.AcceptanceRequestByEmployee ||
+                            item.LastStatusId == (int)OnlineServices.Entity.StatusEnum.WaitingAcceptanceByEmployee ||
+                          item.LastStatusId == (int)OnlineServices.Entity.StatusEnum.CancelRequestByUser ||
+                          item.LastStatusId == (int)OnlineServices.Entity.StatusEnum.CancelRequestByEmployee)
+                        { 
+                        <a href="javascript:" 
+                           data-servicerequestid="@item.Id"
+                           data-stateid="@item.SourceStateId"
+                           data-cityid="@item.SourceCityId" 
+                           data-servicetypeid="@item.ServiceTypeId"
+                           class="btn btn-dark mr-1 mb-1 refrence-user-list">
+                            ارجاع
+                        </a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@{
+    var pager = Html.AjaxPager(Model.PagerModel, "-service-request");
+}
+<div class="pager">
+    @pager
+</div>

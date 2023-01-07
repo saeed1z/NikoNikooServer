@@ -1,0 +1,593 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Api\\OnlineServices.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Api\\OnlineServices.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Api\\OnlineServices.Api.csproj",
+        "projectName": "OnlineServices.Api",
+        "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Api\\OnlineServices.Api.csproj",
+        "packagesPath": "C:\\Users\\siama\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\siama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Core\\OnlineServices.Core.csproj": {
+                "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Core\\OnlineServices.Core.csproj"
+              },
+              "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj": {
+                "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj"
+              },
+              "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices\\OnlineServices.csproj": {
+                "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices\\OnlineServices.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.7, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.29, 3.1.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Core\\OnlineServices.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Core\\OnlineServices.Core.csproj",
+        "projectName": "OnlineServices.Core",
+        "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Core\\OnlineServices.Core.csproj",
+        "packagesPath": "C:\\Users\\siama\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\siama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj": {
+                "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj"
+              },
+              "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Persistence\\OnlineServices.Persistence.csproj": {
+                "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Persistence\\OnlineServices.Persistence.csproj"
+              },
+              "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.ViewModel\\OnlineServices.ViewModel.csproj": {
+                "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.ViewModel\\OnlineServices.ViewModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj",
+        "projectName": "OnlineServices.Entity",
+        "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj",
+        "packagesPath": "C:\\Users\\siama\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\siama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Persistence\\OnlineServices.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Persistence\\OnlineServices.Persistence.csproj",
+        "projectName": "OnlineServices.Persistence",
+        "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Persistence\\OnlineServices.Persistence.csproj",
+        "packagesPath": "C:\\Users\\siama\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\siama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj": {
+                "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.ViewModel\\OnlineServices.ViewModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.ViewModel\\OnlineServices.ViewModel.csproj",
+        "projectName": "OnlineServices.ViewModel",
+        "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.ViewModel\\OnlineServices.ViewModel.csproj",
+        "packagesPath": "C:\\Users\\siama\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.ViewModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\siama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj": {
+                "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices\\OnlineServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices\\OnlineServices.csproj",
+        "projectName": "OnlineServices",
+        "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices\\OnlineServices.csproj",
+        "packagesPath": "C:\\Users\\siama\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\siama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Core\\OnlineServices.Core.csproj": {
+                "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Core\\OnlineServices.Core.csproj"
+              },
+              "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj": {
+                "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "RotativaCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.29, 3.1.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1630 @@
+﻿<app>
+	<!--Saffron PageData format
+	
+		page.@id: page unique id to call with this.dispatch(new AppEventContent())
+		type: Page class name on PageContainer
+		menutype: Menu class name on MenuContainer
+		content: String content for the page
+		music: Music url on Data folder. the Saffrom engine will load it automaticly for each page
+		image: The page single Image url
+		images: List of images for gallery contains <img text="" targ="null" w="NaN" h="NaN" x="NaN" y="NaN"/> list
+		first links tag: list of Link items to creats lists
+		second links tag just same as first one but the order of them is important
+	-->
+	
+	<!--debug/-->
+	<page id="home">
+    <type>home</type>
+    <title>صفحه اصلی</title>
+    <image/>
+    <music/>
+    <released/>
+    <customer/>
+    <content/>
+    <links>
+      <link level="1" name="ورود و عضویت" id="Login" icon="Data/images/menu/Profile.png"/>
+      <link level="1" name="صفحه اصلی" id="home" icon="Data/images/menu/iamge2.png"/>
+    </links>
+    <links>
+      <link level="1" name="انگلیسی - English " id="English" icon="Data/images/menu/split.png"/>
+      <link level="1" name="حروف - Letters " id="MeettheLetters" icon="Data/images/menu/page.png"/>
+      <link level="1" name="اعداد - Numbers " id="MeettheNumbers" icon="Data/images/menu/page.png"/>
+      <link level="1" name="رنگ ها - Colors " id="MeettheColors" icon="Data/images/menu/page.png"/>
+      <link level="1" name="اشکال - Shapes " id="MEET_THE_SHAPES" icon="Data/images/menu/page.png"/>
+      <link level="1" name="(1) شکل کلمات - Sight Words " id="MEET_THE_SIGHT_WORDS_1" icon="Data/images/menu/page.png"/>
+      <link level="1" name="(2) شکل کلمات - Sight Words " id="MEET_THE_SIGHT_WORDS_2" icon="Data/images/menu/page.png"/>
+      <link level="1" name="(3) شکل کلمات - Sight Words " id="MEET_THE_SIGHT_WORDS_3" icon="Data/images/menu/page.png"/>
+      <link level="1" name="تلفظ صداهای ترکیبی - Phonics Blends " id="MeetthePhonics_Blends" icon="Data/images/menu/page.png"/>
+      <link level="1" name="کلمات دو حرف و یک صدایی - Phonics Digraphs " id="MeetthePhonics_Digraphs" icon="Data/images/menu/page.png"/>
+      <link level="1" name="کلمات صدادار - Phonics Letter Sounds " id="MeetthePhonics_LetterSounds" icon="Data/images/menu/page.png"/>
+      <link level="1" name="اسپانیایی - Espanol " id="Espanol" icon="Data/images/menu/split.png"/>
+      <link level="1" name="حروف - Letras " id="ConocelasLetras" icon="Data/images/menu/page.png"/>
+      <link level="1" name="اعداد - Numeros " id="ConocelosNumeros" icon="Data/images/menu/page.png"/>
+      <link level="1" name="رنگ ها - Colores " id="ConocelosColores" icon="Data/images/menu/page.png"/>
+      <link level="1" name="اشکال - Figuras " id="ConocelasFiguras" icon="Data/images/menu/page.png"/>
+      <link level="1" name="درباره نیک و نیکو" id="AboutUs" icon="Data/images/menu/page.png"/>
+      <link level="1" name="خروج از برنامه" id="exit" icon="Data/images/menu/exit.png"/>
+    </links>
+  </page>
+
+	<page id="home0">
+		<!-- <scroll>1</scroll> code.ui.home.HomeCat-->
+	  <type>code.ui.home.HomeCat</type>
+	  <menutype/>
+	  <title/>
+	  <content x="NaN" y="NaN" w="NaN" h="NaN" align=""/>
+	  <music/>
+	  <image/>
+	  <images>
+		<img text="" targ="Data/img/slider/01.jpg" w="NaN" h="NaN" x="NaN" y="NaN"/>
+		<img text="" targ="Data/img/slider/02.jpg" w="NaN" h="NaN" x="NaN" y="NaN"/>
+	  </images>
+	  <links>
+			<link level="1" name="پروفایل کاربر" id="profile_page" icon=""/>
+	  </links>
+	  <links/>
+	</page>
+
+	<page id="my_account_page">
+		<!-- <scroll>1</scroll> -->
+		<type>code.ui.home.MyAccount</type>
+		<menutype/>
+		<title>حساب من</title>
+		<content x="NaN" y="NaN" w="NaN" h="NaN" align=""/>
+		<music/>
+		<links>
+			<link level="-1" name="" id="my_packages_page" icon=""/>
+			<link level="-1" name="" id="packages_list_page" icon=""/>
+		</links>
+		<links/>
+	</page>
+
+	<page id="my_packages_page">
+		<!-- <scroll>1</scroll> -->
+		<type>code.ui.home.MyPackagesItem</type>
+		<menutype/>
+		<title>بسته های خریداری شده</title>
+		<content x="NaN" y="NaN" w="NaN" h="NaN" align=""/>
+		<music/>
+		<links>
+			<link level="-1" name="" id="my_packages_detail_page" icon=""/>
+		</links>
+		<links/>
+	</page>
+
+	<page id="packages_list_page">
+		<!-- <scroll>1</scroll> -->
+		<type>code.ui.home.MyServises</type>
+		<menutype/>
+		<title>لیست بسته های ارائه شده و خرید بسته</title>
+		<content x="NaN" y="NaN" w="NaN" h="NaN" align=""/>
+		<music/>
+		<links>
+			<link level="-1" name="" id="my_packages_page" icon=""/>
+		</links>
+		<links/>
+	</page>
+
+
+			<page id="moreInfo_dispach">
+				<type>code.api.getRequestDetails._getRequestDetails</type>
+				<title></title>
+				<content></content>
+			</page>
+
+
+
+	<!-- taviz lavazem -->
+
+			<page id="service_select_taviz_lavazem_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.tavizlavazem.SelectTavizLavazem</type>
+				<menutype/>
+				<title>انتخاب خدمات لوازم خودرو</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_taviz_lavazem_page_map_page" icon=""/>	
+				</links>
+				<links/>
+			</page>
+
+	
+			<page id="service_taviz_lavazem_page_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>موقعیت خودرو شما</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_taviz_lavazem_page_service_select_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="service_taviz_lavazem_page_service_select_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.tavizlavazem.TavizLavazemSelectService</type>
+					<menutype/>
+					<title>خدمات تعویض لوازم را انتخاب کنید</title>
+					<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+					<music/>
+					<links>
+						<link level="-1" name="ثبت درخواست" id="service_taviz_lavazem_page" icon=""/>
+					</links>
+					<links/>
+			</page>
+
+			<page id="service_taviz_lavazem_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.tavizlavazem.TavizLavazem</type><!--code.ui.services.karvash.Karvash-->
+				<menutype/>
+				<title>تعویض لوازم</title>
+				<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+				<music/>
+				<links>
+					<link level="1" name="ثبت درخواست" id="users_taviz_lavazem_orders_page" icon=""/>
+					<link level="-1" name="" id="packages_list_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+			
+			<page id="users_taviz_lavazem_orders_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.OrdersHistory.OrdersHistory</type>
+				<menutype/>
+				<title>پیگیری سفارش های تعویض لوازم</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align="">7</content>
+				<music/>
+				<links>
+					<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+					
+				</links>
+				<links/>
+			</page>
+
+
+
+	<!-- select bime -->
+
+		<page id="service_select_bime_page">
+			<!-- <scroll>1</scroll> -->
+			<type>code.ui.services.bime.SelectBime</type><!--code.ui.services.karvash.Karvash-->
+			<menutype/>
+			<title>انتخاب خدمات بیمه</title>
+			<content></content>
+			<music/>
+			<links>
+				<link level="-1" name="ثبت درخواست" id="service_bime_page_map_page" icon=""/>
+				<link level="-1" name="ثبت درخواست" id="service_khesarat_page_map_page" icon=""/>
+			</links>
+			<links/>
+		</page>
+
+	<!-- bime(online) -->
+		
+			<page id="service_bime_page_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>موقعیت خودرو شما</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_bime_page_service_fillout_form_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="service_bime_page_service_fillout_form_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.bime.BimeFilloutForm</type>
+					<menutype/>
+					<title>درخواست بیمه خود را درج کنید</title>
+					<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+					<music/>
+					<links>
+						<link level="-1" name="ثبت درخواست" id="service_bime_page" icon=""/>
+					</links>
+					<links/>
+			</page>
+
+			<page id="service_bime_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.bime.Bime</type><!--code.ui.services.karvash.Karvash-->
+				<menutype/>
+				<title>خدمات خرید بیمه آنلاین</title>
+				<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+				<music/>
+				<links>
+					<link level="1" name="ثبت درخواست" id="users_bime_orders_page" icon=""/>
+					<link level="-1" name="" id="packages_list_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+			
+			<page id="users_bime_orders_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.OrdersHistory.OrdersHistory</type>
+				<menutype/>
+				<title>پیگیری درخواست های خرید آنلاین بیمه</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align="">11</content>
+				<music/>
+				<links>
+					<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+					
+				</links>
+				<links/>
+			</page>
+
+
+		<!-- khesarat(abulance) -->
+		
+			<page id="service_khesarat_page_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>موقعیت خودرو شما</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_khesarat_page_service_fillout_form_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="service_khesarat_page_service_fillout_form_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.bime.KhesaratFilloutForm</type>
+					<menutype/>
+					<title>درخواست بیمه خود را درج کنید</title>
+					<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+					<music/>
+					<links>
+						<link level="-1" name="ثبت درخواست" id="service_khesarat_page" icon=""/>
+					</links>
+					<links/>
+			</page>
+
+			<page id="service_khesarat_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.bime.Khesarat</type><!--code.ui.services.karvash.Karvash-->
+				<menutype/>
+				<title>خدمات امور بیمه ای و تامین خسارت</title>
+				<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+				<music/>
+				<links>
+					<link level="1" name="ثبت درخواست" id="users_khesarat_orders_page" icon=""/>
+					<link level="-1" name="" id="packages_list_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+			
+			<page id="users_khesarat_orders_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.OrdersHistory.OrdersHistory</type>
+				<menutype/>
+				<title>پیگیری درخواست های امور بیمه ای و تامین خسارت</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align="">3</content>
+				<music/>
+				<links>
+					<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+					
+				</links>
+				<links/>
+			</page>
+
+
+		<!-- servisdorei -->
+
+
+			<page id="service_select_servis_khodro_page_">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.servisdorei.SelectServisKhodro</type>
+				<menutype/>
+				<title>انتخاب خدمات سرویس خودرو</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="امور سرویس های دوره ای" id="service_servis_dorei_page_map_page" icon=""/>
+					<link level="-1" name="ثبت درخواست" id="service_tamirat_fani_page_map_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+			<!-- servis dorei -->
+			<page id="service_servis_dorei_page_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>امور سرویس های دوره ای</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_servis_dorei_page_fillout_form_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="service_servis_dorei_page_fillout_form_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.servisdorei.ServisDoreiFilloutForm</type>
+					<menutype/>
+					<title>درخواست سرویس دوره ای را درج کنید</title>
+					<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+					<music/>
+					<links>
+						<link level="-1" name="ثبت درخواست" id="service_ServisDorei_page" icon=""/>
+					</links>
+					<links/>
+			</page>
+
+			<page id="service_ServisDorei_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.servisdorei.ServisDorei</type><!--code.ui.services.karvash.Karvash-->
+				<menutype/>
+				<title>سرویس دوره ای</title>
+				<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+				<music/>
+				<links>
+					<link level="1" name="ثبت درخواست" id="users_servis_dorei_orders_page" icon=""/>
+					<link level="-1" name="" id="packages_list_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+			
+			<page id="users_servis_dorei_orders_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.OrdersHistory.OrdersHistory</type>
+				<menutype/>
+				<title>پیگیری درخواست های سرویس دوره ای</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align="">5</content>
+				<music/>
+				<links>
+					<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+					
+				</links>
+				<links/>
+			</page>
+
+
+
+			<!-- tamirat fani -->
+			<page id="service_tamirat_fani_page_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>تعمیرات فنی و بدنه</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_tamirat_fani_page_fillout_form_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="service_tamirat_fani_page_fillout_form_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.servisdorei.TamiratFaniFilloutForm</type>
+					<menutype/>
+					<title>درخواست تعمیرات فنی را درج کنید</title>
+					<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+					<music/>
+					<links>
+						<link level="-1" name="ثبت درخواست" id="service_TamiratFani_page" icon=""/>
+					</links>
+					<links/>
+			</page>
+
+			<page id="service_TamiratFani_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.servisdorei.TamiratFani</type><!--code.ui.services.karvash.Karvash-->
+				<menutype/>
+				<title>تعمیرات فنی</title>
+				<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+				<music/>
+				<links>
+					<link level="1" name="ثبت درخواست" id="users_tamirat_fani_orders_page" icon=""/>
+					<link level="-1" name="" id="packages_list_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+			
+			<page id="users_tamirat_fani_orders_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.OrdersHistory.OrdersHistory</type>
+				<menutype/>
+				<title>پیگیری درخواست های تعمیرات فنی</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align="">15</content>
+				<music/>
+				<links>
+					<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+					
+				</links>
+				<links/>
+			</page>
+
+
+
+
+
+
+			
+
+			<!-- moayeneh fani -->
+			<page id="service_moayeneh_fani_page_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>موقعیت خودرو شما</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_moayeneh_fani_page_fillout_form_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="service_moayeneh_fani_page_fillout_form_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.moayenehfani.MoayenehFaniFilloutForm</type>
+					<menutype/>
+					<title>درخواست معاینه فنی را درج کنید</title>
+					<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+					<music/>
+					<links>
+						<link level="-1" name="ثبت درخواست" id="service_MoayenehFani_page" icon=""/>
+					</links>
+					<links/>
+			</page>
+
+			<page id="service_MoayenehFani_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.moayenehfani.MoayenehFani</type><!--code.ui.services.karvash.Karvash-->
+				<menutype/>
+				<title>معاینه فنی</title>
+				<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+				<music/>
+				<links>
+					<link level="1" name="ثبت درخواست" id="users_moayeneh_fani_orders_page" icon=""/>
+					<link level="-1" name="" id="packages_list_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+			
+			<page id="users_moayeneh_fani_orders_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.OrdersHistory.OrdersHistory</type>
+				<menutype/>
+				<title>پیگیری درخواست های معاینه فنی</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align="">14</content>
+				<music/>
+				<links>
+					<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+					
+				</links>
+				<links/>
+			</page>
+
+
+
+		<!-- yadavari -->
+			<page id="service_yadavari_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.yadavari.Yadavari</type><!--code.ui.services.karvash.Karvash-->
+				<menutype/>
+				<title>لیست یادآورها</title>
+				<content>لیست یادآور ها</content>
+				<music/>
+				<links>
+					<link level="-1" name="مدیریت یادآور" id="service_yadavari_manager_page" icon=""/>
+					<link level="-2" name="مدیریت یادآور" id="service_yadavari_manager_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="service_yadavari_manager_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.yadavari.YadavariManager</type><!--code.ui.services.karvash.Karvash-->
+				<menutype/>
+				<title></title>
+				<content>مدیریت یادآورها</content>
+				<music/>
+				<links>
+					<link level="-1" name="لیست یادآورها" id="service_yadavari_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+
+		<!-- tavizPelak -->
+
+		
+			<page id="service_taviz_pelak_page_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>موقعیت خودرو شما</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_taviz_pelak_page_service_fillout_form_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="service_taviz_pelak_page_service_fillout_form_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.tavizpelak.TavizPelakFilloutForm</type>
+					<menutype/>
+					<title>درخواست تعویض پلاک را درج کنید</title>
+					<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+					<music/>
+					<links>
+						<link level="-1" name="ثبت درخواست" id="service_taviz_pelak_page" icon=""/>
+					</links>
+					<links/>
+			</page>
+			
+			<page id="service_taviz_pelak_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.tavizpelak.TavizPelak</type><!--code.ui.services.karvash.Karvash-->
+				<menutype/>
+				<title>تعویض پلاک</title>
+				<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+				<music/>
+				<links>
+					<link level="1" name="ثبت درخواست" id="users_taviz_pelak_orders_page" icon=""/>
+					<link level="-1" name="" id="packages_list_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="users_taviz_pelak_orders_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.OrdersHistory.OrdersHistory</type>
+				<menutype/>
+				<title>پیگیری درخواست های تعویض پلاک</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align="">2</content>
+				<music/>
+				<links>
+					<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+					
+				</links>
+				<links/>
+			</page>
+
+
+
+
+			<!-- karshenasi -->
+
+
+			<page id="servis_karshenasi_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>موقعیت خودرو شما</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_karshenasi_page_service_fillout_form_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="service_karshenasi_page_service_fillout_form_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.karshenasi.KarshenasiFilloutForm</type>
+				<menutype/>
+				<title>درخواست کارشناس را درج کنید</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_karshenasi_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+			
+			<page id="service_karshenasi_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.karshenasi.Karshenasi</type><!--code.ui.services.karvash.Karvash-->
+				<menutype/>
+				<title>تعویض پلاک</title>
+				<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+				<music/>
+				<links>
+					<link level="1" name="ثبت درخواست" id="users_karshenasi_orders_page" icon=""/>
+					<link level="-1" name="" id="packages_list_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="users_karshenasi_orders_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.OrdersHistory.OrdersHistory</type>
+				<menutype/>
+				<title>پیگیری درخواست های کارشناس</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align="">10</content>
+				<music/>
+				<links>
+					<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+					
+				</links>
+				<links/>
+			</page>
+
+
+
+			<!-- karshenasi karshenasi karshenasi karshenasi karshenasi -->
+
+
+			<page id="servis_karshenasi_map_page2">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>موقعیت خودرو شما</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_karshenasi_page_service_fillout_form_page2" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="service_karshenasi_page_service_fillout_form_page2">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.karshenasi2.KarshenasiFilloutForm</type>
+				<menutype/>
+				<title>درخواست کارشناس را درج کنید</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_karshenasi_page2" icon=""/>
+				</links>
+				<links/>
+			</page>
+			
+			<page id="service_karshenasi_page2">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.karshenasi2.Karshenasi</type><!--code.ui.services.karvash.Karvash-->
+				<menutype/>
+				<title>تعویض پلاک</title>
+				<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+				<music/>
+				<links>
+					<link level="1" name="ثبت درخواست" id="users_karshenasi_orders_page2" icon=""/>
+					<link level="-1" name="" id="packages_list_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="users_karshenasi_orders_page2">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.OrdersHistory.OrdersHistory</type>
+				<menutype/>
+				<title>پیگیری درخواست های کارشناس</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align="">4</content>
+				<music/>
+				<links>
+					<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+					
+				</links>
+				<links/>
+			</page>
+
+
+
+
+
+
+
+
+
+			<page id="all_brands_list_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.models.BrandListPage</type>
+				<menutype/>
+				<title>انتخاب برند</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+				<music/>
+				<links>
+					<link level="-1" name="اتتخاب مدل" id="all_model_list_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+			
+
+				<page id="all_model_list_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.models.ModelListPage</type>
+					<menutype/>
+					<title>انتخاب مدل</title>
+					<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+					<music/>
+					<links>
+						<link level="-1" name="مشاهده مدل" id="model_page" icon=""/>
+					</links>
+					<links/>
+				</page>
+
+
+		<page id="model_page">
+			<!-- <scroll>1</scroll> -->
+			<type>code.ui.models.ModelUI</type>
+			<menutype/>
+			<title>مشخصات خودرو</title>
+			<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+			<music/>
+			<links>
+				<link level="-1" name="مقایسه با..." id="brands_list_page" icon=""/>
+			</links>
+			<links/>
+		</page>
+
+			<page id="brands_list_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.models.BrandListPage</type>
+				<menutype/>
+				<title>انتخاب برند</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+				<music/>
+				<links>
+					<link level="-1" name="اتتخاب مدل" id="model_list_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+				<page id="model_list_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.models.ModelListPage</type>
+					<menutype/>
+					<title>انتخاب مدل</title>
+					<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+					<music/>
+					<links>
+						<link level="-1" name="مقایسه با..." id="model_compair_page" icon=""/>
+					</links>
+					<links/>
+				</page>
+
+					<page id="model_compair_page">
+						<!-- <scroll>1</scroll> -->
+						<type>code.ui.models.ModelCompair</type>
+						<menutype/>
+						<title>مقایسه مدل ها</title>
+						<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+						<music/>
+						<links>
+							<link level="-1" name="ثبت درخواست" id="servis_karshenasi_map_page" icon=""/>
+						</links>
+						<links/>
+					</page>
+
+		<page id="profile_page">
+			<!-- <scroll>1</scroll> -->
+			<type>code.ui.profile.ProfilePage</type>
+			<menutype/>
+			<title></title>
+			<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+			<music/>
+			<links>
+			</links>
+			<links/>
+		</page>
+
+		<page id="users_orders_page">
+			<!-- <scroll>1</scroll> -->
+			<type>code.ui.OrdersHistory.OrdersHistory</type>
+			<menutype/>
+			<title>پیگیری سفارش</title>
+			<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+			<music/>
+			<links>
+				<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+				
+			</links>
+			<links/>
+		</page>
+
+			<page id="users_orders_detail_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.OrdersHistory.OrderHistoryDetail</type>
+				<menutype/>
+				<title>جزئیات</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+				<music/>
+				<links>
+					<link level="-1" name="جزئیات" id="users_chat_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+
+
+			<page id="users_chat_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.chat.ChatPage</type>
+				<menutype/>
+				<title>جزئیات</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+				<music/>
+				<links>
+				</links>
+				<links/>
+			</page>
+
+
+
+
+			<page id="service_sookht2_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>موقعیت خودرو شما</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_sookht3_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+				<page id="service_sookht3_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.sookht.Sookht2</type>
+					<menutype/>
+					<title>آدرس دقیق خود را اعلام فرمایید</title>
+					<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+					<music/>
+					<links>
+						<link level="-1" name="ثبت درخواست" id="service_sookht_page" icon=""/>
+					</links>
+					<links/>
+				</page>
+
+				<page id="service_sookht_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.sookht.Sookht</type>
+					<menutype/>
+					<title>درخواست سوخت</title>
+					<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+					<music/>
+					<links>
+						<link level="1" name="ثبت درخواست" id="users_sookht_orders_page" icon=""/>
+						<link level="-1" name="" id="packages_list_page" icon=""/>
+					</links>
+					<links/>
+				</page>
+
+		<page id="users_sookht_orders_page">
+			<!-- <scroll>1</scroll> -->
+			<type>code.ui.OrdersHistory.OrdersHistory</type>
+			<menutype/>
+			<title>پیگیری سفارش های سوخت</title>
+			<content x="NaN" y="NaN" w="NaN" h="NaN" align="">9</content>
+			<music/>
+			<links>
+				<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+				
+			</links>
+			<links/>
+		</page>
+
+
+
+			<page id="service_karvash2_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>موقعیت خودرو شما</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_karvash3_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+				<page id="service_karvash3_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.karvash.Karvash2</type>
+					<menutype/>
+					<title>خدمات کارواش را انتخاب کنید</title>
+					<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+					<music/>
+					<links>
+						<link level="-1" name="ثبت درخواست" id="service_karvash_page" icon=""/>
+					</links>
+					<links/>
+				</page>
+
+				<page id="service_karvash_page">
+					<!-- <scroll>1</scroll>     بسته مورد نظر را از لیست انتخاب کنید. -->
+					<type>code.ui.services.karvash.Karvash</type>
+					<menutype/>
+					<title>کارواش</title>
+					<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+					<music/>
+					<links>
+						<link level="1" name="ثبت درخواست" id="users_karvash_orders_page" icon=""/>
+						<link level="-1" name="" id="packages_list_page" icon=""/>
+					</links>
+					<links/>
+				</page>
+
+
+		<page id="users_karvash_orders_page">
+			<!-- <scroll>1</scroll> -->
+			<type>code.ui.OrdersHistory.OrdersHistory</type>
+			<menutype/>
+			<title>پیگیری سفارش های کارواش</title>
+			<content x="NaN" y="NaN" w="NaN" h="NaN" align="">6</content>
+			<music/>
+			<links>
+				<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+				
+			</links>
+			<links/>
+		</page>
+
+
+
+		
+
+
+		
+
+			<page id="service_haml2_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>موقعیت مبدا</title>
+				<content>1</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_haml2_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+			<page id="service_haml2_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.KhodroBar2</type>
+				<menutype/>
+				<title>خودروبر</title>
+				<content>مبدا را مشخص کنید</content>
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_haml3_map_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+			<page id="service_haml3_map_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.services.khodrobar.AccurateLocation</type>
+				<menutype/>
+				<title>موقعیت مقصد</title>
+				<content>2</content><!--1 for only mabda, 2 for only maghsad-->
+				<music/>
+				<links>
+					<link level="-1" name="ثبت درخواست" id="service_haml3_page" icon=""/>
+				</links>
+				<links/>
+			</page>
+
+				<page id="service_haml3_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.khodrobar.KhodroBar3</type>
+					<menutype/>
+					<title>خودروبر</title>
+					<content>مقصد را مشخص کنید</content>
+					<music/>
+					<links>
+						<link level="-1" name="ثبت درخواست" id="service_haml_gheymat_page" icon=""/>
+					</links>
+					<links/>
+				</page>
+
+
+				<page id="service_haml_gheymat_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.khodrobar.HamlGheymat</type>
+					<menutype/>
+					<title>خودروبر</title>
+					<content>هزینه حمل خودرو</content>
+					<music/>
+					<links>
+						<link level="-1" name="ثبت درخواست" id="service_haml_page" icon=""/>
+					</links>
+					<links/>
+				</page>
+
+
+				<page id="service_haml_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.services.khodrobar.KhodroBar</type>
+					<menutype/>
+					<title>خودروبر</title>
+					<content>بسته مورد نظر را از لیست انتخاب کنید.</content>
+					<music/>
+					<links>
+						<link level="1" name="ثبت درخواست" id="users_haml_orders_page" icon=""/>
+						<link level="-1" name="" id="packages_list_page" icon=""/>
+					</links>
+					<links/>
+				</page>
+
+				<page id="users_haml_orders_page">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.OrdersHistory.OrdersHistory</type>
+					<menutype/>
+					<title>پیگیری درخواست های  خودروبر</title>
+					<content x="NaN" y="NaN" w="NaN" h="NaN" align="">1</content>
+					<music/>
+					<links>
+						<link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/>
+					</links>
+					<links/>
+				</page>
+
+
+
+
+			<page id="users_comments_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.OrdersHistory.CommentService</type>
+				<menutype/>
+				<title>نظر سنجی</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align="">نظر سنجی</content>
+				<music/>
+				<links>
+					<!-- <link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/> -->
+				</links>
+				<links/>
+			</page>
+
+
+			<page id="customer_factor_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.customerFactor.CustomerFactorPage</type>
+				<menutype/>
+				<title>لیست فاکتورها</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+				<music/>
+				<links>
+					<!-- <link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/> -->
+				</links>
+				<links/>
+			</page>
+
+			<page id="customer_factor_detail_page">
+				<!-- <scroll>1</scroll> -->
+				<type>code.ui.customerFactor.CustomerFactorDetailPage</type>
+				<menutype/>
+				<title>لیست اقلام فاکتور</title>
+				<content x="NaN" y="NaN" w="NaN" h="NaN" align=""></content>
+				<music/>
+				<links>
+					<!-- <link level="-1" name="جزئیات" id="users_orders_detail_page" icon=""/> -->
+				</links>
+				<links/>
+			</page>
+
+
+
+
+				<page id="CarrSelectorComponent">
+					<!-- <scroll>1</scroll> -->
+					<type>code.ui.profile.SabtPelak</type>
+					<menutype/>
+					<title>ثبت پلاک</title>
+					<content x="NaN" y="NaN" w="NaN" h="NaN" align="">1</content>
+					<music/>
+					<links>
+							<link level="-1" name="" id="my_packages_page" icon=""/>
+							<link level="-1" name="" id="packages_list_page" icon=""/>
+					</links>
+					<links/>
+				</page>
+
+
+			<page id="KhodroBarRayegan">
+				<type>code.ui.profile.KhodroBarRayegan</type>
+				<title>ورود اطلاعات سریع</title>
+			</page>
+			
+			
+			<page id="DarkhastKarbareTejari">
+				<type>code.ui.profile.DarkhastTejari</type>
+				<title>فرم درخواست کاربر تجاری</title>
+			</page>
+
+
+			<page id="register_haml_request_page">
+				<type>code.ui.Form.SampleForm</type>
+				<title>ثبت درخواست</title>
+			</page>
+	
+	
+	
+	
+	
+			<page id="payfactor">
+				<type>code.api.PayFactor._PayFactor</type>
+				<title></title>
+				<content></content>
+			</page>
+	
+			<page id="apload_dispach">
+				<type>code.api.GetRequestFiles._GetRequestFiles</type>
+				<title></title>
+				<content></content>
+			</page>
+	
+			<page id="StartTicketing">
+				<type>code.api.Ticket.GetTicketList._GetTicketList</type>
+				<title></title>
+				<content></content>
+			</page>
+
+			<page id="sabtticktjadid">
+				<type>code.api.Ticket.StartTicket._StartTicket</type>
+				<title></title>
+				<content></content>
+			</page>
+	
+	
+			<page id="greftanlistcomment">
+				<type>code.api.Ticket.GetCommentList._GetCommentList</type>
+				<title></title>
+				<content></content>
+			</page>
+
+
+
+
+
+
+
+
+  <page id="MainMenu">
+    <type>ui.pages.MainMenu</type>
+    <title>بخش انگلیسی</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+
+
+  <!--انگلیسی-->
+  <page id="English">
+    <type>ui.pages.English</type>
+    <title>بخش انگلیسی</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="EnglishBasics">
+    <type>ui.pages.EnglishBasics</type>
+    <title>آموزش های پایه ای</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="EnglishSightWords">
+    <type>ui.pages.EnglishSightWords</type>
+    <title>حروف صدادار</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="EnglishPhonics">
+    <type>ui.pages.EnglishPhonics</type>
+    <title>صدا و پژواک</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  
+
+
+
+  
+  <page id="MeettheLetters">
+    <type>ui.pages.MeettheLetters</type>
+    <title>آشنایی با حروف</title>
+   	<content align="1" x='' y='' w='750'></content>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+  <page id="MeettheLettersList">
+    <type>ui.pages.MeettheLettersList</type>
+    <title>آشنایی با حروف</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+
+  <page id="MeettheNumbers">
+    <type>ui.pages.MeettheNumbers</type>
+    <title>آشنایی با اعداد</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="MeettheNumbersList">
+    <type>ui.pages.MeettheNumbersList</type>
+    <title>آشنایی با اعداد</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+  <page id="MEET_THE_SHAPES">
+    <type>ui.pages.MEET_THE_SHAPES</type>
+    <title>آشنایی با اشکال</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="MEET_THE_SHAPESList">
+    <type>ui.pages.MEET_THE_SHAPESList</type>
+    <title>آشنایی با اشکال</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+  <page id="MeettheColors">
+    <type>ui.pages.MeettheColors</type>
+    <title>آشنایی با رنگ ها</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="MeettheColorsList">
+    <type>ui.pages.MeettheColorsList</type>
+    <title>آشنایی با رنگ ها</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+  <page id="MEET_THE_SIGHT_WORDS_1">
+    <type>ui.pages.MEET_THE_SIGHT_WORDS_1</type>
+    <title>آشنایی با شکل کلمات سطح 3/1</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="MEET_THE_SIGHT_WORDS_1List">
+    <type>ui.pages.MEET_THE_SIGHT_WORDS_1List</type>
+    <title>آشنایی با شکل کلمات سطح 3/1</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+  <page id="MEET_THE_SIGHT_WORDS_2">
+    <type>ui.pages.MEET_THE_SIGHT_WORDS_2</type>
+    <title>آشنایی با شکل کلمات سطح 3/2</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="MEET_THE_SIGHT_WORDS_2List">
+    <type>ui.pages.MEET_THE_SIGHT_WORDS_2List</type>
+    <title>آشنایی با شکل کلمات سطح 3/2</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+  <page id="MEET_THE_SIGHT_WORDS_3">
+    <type>ui.pages.MEET_THE_SIGHT_WORDS_3</type>
+    <title>آشنایی با شکل کلمات سطح 3/3</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="MEET_THE_SIGHT_WORDS_3List">
+    <type>ui.pages.MEET_THE_SIGHT_WORDS_3List</type>
+    <title>آشنایی با شکل کلمات سطح 3/3</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+  <page id="MeetthePhonics_Blends">
+    <type>ui.pages.MeetthePhonics_Blends</type>
+    <title>آشنایی با تلفظ صداهای ترکیبی</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="MeetthePhonics_BlendsList">
+    <type>ui.pages.MeetthePhonics_BlendsList</type>
+    <title>آشنایی با تلفظ صداهای ترکیبی</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+  <page id="MeetthePhonics_Digraphs">
+    <type>ui.pages.MeetthePhonics_Digraphs</type>
+    <title>آشنایی با کلمات دو حرف و یک صدایی</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="MeetthePhonics_DigraphsList">
+    <type>ui.pages.MeetthePhonics_DigraphsList</type>
+    <title>آشنایی با کلمات دو حرف و یک صدایی</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+  <page id="MeetthePhonics_LetterSounds">
+    <type>ui.pages.MeetthePhonics_LetterSounds</type>
+    <title>آشنایی با کلمات صدادار</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="MeetthePhonics_LetterSoundsList">
+    <type>ui.pages.MeetthePhonics_LetterSoundsList</type>
+    <title>آشنایی با کلمات صدادار</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+
+  
+  <!--اسپانیایی-->
+  <page id="Espanol">
+    <type>ui.pages.Espanol</type>
+    <title>بخش اسپانیایی</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="ConocelasLetras">
+    <type>ui.pages.ConocelasLetras</type>
+    <title>آشنایی با حروف</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="ConocelasLetrasList">
+    <type>ui.pages.ConocelasLetrasList</type>
+    <title>آشنایی با حروف</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+  <page id="ConocelosNumeros">
+    <type>ui.pages.ConocelosNumeros</type>
+    <title>آشنایی با اعداد</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="ConocelosNumerosList">
+    <type>ui.pages.ConocelosNumerosList</type>
+    <title>آشنایی با اعداد</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+  <page id="ConocelosColores">
+    <type>ui.pages.ConocelosColores</type>
+    <title>آشنایی با رنگ ها</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="ConocelosColoresList">
+    <type>ui.pages.ConocelosColoresList</type>
+    <title>آشنایی با رنگ ها</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+  <page id="ConocelasFiguras">
+    <type>ui.pages.ConocelasFiguras</type>
+    <title>آشنایی با اشکال</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="ConocelasFigurasList">
+    <type>ui.pages.ConocelasFigurasList</type>
+    <title>آشنایی با اشکال</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+  
+ <page id="AboutUs">
+    <type>ui.pages.AboutUs</type>
+    <title>درباره ما</title>
+    <image/>
+    <content/>
+    <links>
+    </links>
+  </page>
+
+ <page id="Nardeban">
+    <type>ui.pages.Nardeban</type>
+    <title>مسیر یادگیری</title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+<page id="EnglishNardeban">
+    <type>ui.pages.EnglishNardeban</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+<page id="EspanishNardeban">
+    <type>ui.pages.EspanishNardeban</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+  <page id="MainCharacter">
+    <type>ui.pages.MainCharacter</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+<page id="MeettheLettersCharacter">
+    <type>ui.pages.MeettheLettersCharacter</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+<page id="MeettheNumbersCharacter">
+    <type>ui.pages.MeettheNumbersCharacter</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+<page id="MEET_THE_SHAPESCharacter">
+    <type>ui.pages.MEET_THE_SHAPESCharacter</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+<page id="MeettheColorsCharacter">
+    <type>ui.pages.MeettheColorsCharacter</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+<page id="MEET_THE_SIGHT_WORDSCharacter">
+    <type>ui.pages.MEET_THE_SIGHT_WORDSCharacter</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+<page id="MeetthePhonics_LetterSoundsCharacter">
+    <type>ui.pages.MeetthePhonics_LetterSoundsCharacter</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+<page id="MeetthePhonics_DigraphsCharacter">
+    <type>ui.pages.MeetthePhonics_DigraphsCharacter</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+<page id="MeetthePhonics_BlendCharacter">
+    <type>ui.pages.MeetthePhonics_BlendCharacter</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+<page id="VideoPlayer">
+    <type>ui.pages.VideoPlayer</type>
+    <title></title>
+    <image/>
+    <content/>
+    <links/>
+    <links/>
+  </page>
+
+
+
+
+
+
+<!--    v,xi0&w+L-##    -->
+
+
+</app>

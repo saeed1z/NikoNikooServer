@@ -1,0 +1,125 @@
+﻿@model OnlineServices.Models.BrandModel
+
+@{
+    ViewData["Title"] = Model.Id != 0 ? "ویرایش برند" : "ثبت برند جدید";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header row">
+    <div class="content-header-left col-12 my-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h5 class="content-header-title float-left">@ViewData["Title"]</h5>
+                <div class="breadcrumb-wrapper ">
+                    <ol class="breadcrumb p-0 pl-1 mb-0">
+                        <li class="breadcrumb-item">
+                            <a asp-controller="Home" asp-action="Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a asp-action="Index">مدیریت برندها</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            @ViewData["Title"]
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-body">
+    <form asp-action="Save" asp-antiforgery="true" enctype="multipart/form-data">
+        @if (!Html.ViewData.ModelState.IsValid)
+        {
+            <div asp-validation-summary="All" class="alert alert-danger mb-2" role="alert">
+            </div>
+        }
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <fieldset class="form-group text-center">
+                                            <img src="~/Uploads/Brand/@Model.BrandFile"
+                                                 class="mx-w-400"
+                                                 asp-append-version="true" />
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset class="form-group">
+                                            <label for="customFile">تصویر برند</label>
+                                            <div class="custom-file">
+                                                <input asp-for="BrandImage" type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label" for="customFile">با کلیک فایل خود را انتخاب و یا ویرایش کنید</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <fieldset class="form-group">
+                                            <label>عنوان</label>
+                                            <input type="text" class="form-control" asp-for="Title" placeholder="عنوان برند را وارد کنید" autocomplete="off">
+                                            <span asp-validation-for="Title" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <fieldset class="form-group">
+                                            <label>عنوان انگلیسی</label>
+                                            <input type="text" class="form-control" asp-for="EnTitle" placeholder="عنوان انگلیسی برند را وارد کنید" autocomplete="off">
+                                            <span asp-validation-for="EnTitle" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset class="form-group">
+                                            <label>توضیحات</label>
+                                            <textarea class="form-control" asp-for="Description" rows="2" placeholder="توضیحات را وارد کنید"></textarea>
+                                            <span asp-validation-for="Description" class="invalid-feedback"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset class="form-group">
+                                            <label>وضعیت</label>
+                                            <div class="checkbox checkbox-primary checkbox-glow d-block">
+                                                <input type="checkbox" asp-for="IsActive">
+                                                <label asp-for="IsActive">فعال</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-success glow mr-1 mb-1">
+                    <i class="bx bx-check"></i>
+                    <span class="align-middle ml-25">ثبت اطلاعات</span>
+                </button>
+
+            </div>
+        </div>
+        @Html.HiddenFor(p => p.Id)
+    </form>
+
+</div>
+@*@if (TempData["Message"] != null)
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            Swal.fire({
+                text: '@TempData["Message"].ToString()',
+                type: "@((bool)TempData["IsError"] == true ? "error" : "success")",
+                confirmButtonClass: 'btn btn-primary',
+                confirmButtonText: 'باشه',
+                buttonsStyling: false,
+            });
+        })
+    </script>
+    //TempData["Message"] = null;
+    //TempData["IsError"] = false;
+}*@

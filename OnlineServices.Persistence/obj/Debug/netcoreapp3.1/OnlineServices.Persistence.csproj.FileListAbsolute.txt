@@ -1,0 +1,16 @@
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.deps.json
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.runtimeconfig.json
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.runtimeconfig.dev.json
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.dll
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.pdb
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Entity.dll
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Entity.pdb
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.csproj.AssemblyReference.cache
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.AssemblyInfoInputs.cache
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.AssemblyInfo.cs
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.csproj.CopyComplete
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.dll
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.pdb
+C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.genruntimeconfig.cache

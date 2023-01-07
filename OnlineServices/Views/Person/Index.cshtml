@@ -1,0 +1,136 @@
+﻿@model OnlineServices.Models.PersonListModel
+@using OnlineServices.Utilities.Extensions
+
+@{
+    ViewData["Title"] = "لیست پرسنل";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header row">
+    <div class="content-header-left col-12 my-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h5 class="content-header-title float-left">@ViewData["Title"]</h5>
+                <div class="breadcrumb-wrapper ">
+                    <ol class="breadcrumb p-0 pl-1 mb-0">
+                        <li class="breadcrumb-item">
+                            <a asp-controller="Home" asp-action="Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            @ViewData["Title"]
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-body">
+    <section id="person-list-content">
+        <div class="row">
+            <div class="col-12">
+                <a asp-action="Edit" class="btn btn-primary mr-1 mb-1">ثبت پرسنل جدید</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content table-responsive">
+                        <table class="table mb-0 line-height-1">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        نام
+                                    </th>
+                                    <th>
+                                        نام خانوادگی
+                                    </th>
+                                    <th>
+                                        نوع کارمند
+                                    </th>
+                                    <th>
+                                        شماره کارمند
+                                    </th>
+                                    <th>
+                                        شماره موبایل
+                                    </th>
+                                    <th>
+                                        وضعیت
+                                    </th>
+                                    <th></th>
+                                    @*<th></th>*@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.PersonModel)
+                                {
+                                    <tr>
+                                        <td>
+                                            @item.FirstName
+                                        </td>
+                                        <td>
+                                            @item.LastName
+                                        </td>
+                                        <td>
+                                            @item.PersonTypeTitle
+                                        </td>
+                                        <td>
+                                            @item.EmployeeNo
+                                        </td>
+                                        <td>
+                                            @item.MobileNo
+                                        </td>
+                                        <td class="@(item.IsActive ? "text-success" : "text-danger")">
+                                            @(item.IsActive ? "فعال" : "غیرفعال")
+                                        </td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.Id" data-toggle="tooltip" title="ویرایش">
+                                                <i class="badge-circle badge-circle-light-secondary bx bxs-pencil font-medium-1"></i>
+                                            </a>
+                                        </td>
+                                        @*<td>
+                                            <a asp-action="Delete" asp-route-id="@item.Id" data-toggle="tooltip" class="delete-confirm" title="حذف">
+                                                <i class="badge-circle badge-circle-light-danger bx bxs-trash-alt font-medium-1"></i>
+                                            </a>
+                                        </td>*@
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    @{
+                        var pager = Html.Pager(Model.PagerModel);
+                    }
+                    @*@if (!pager.IsEmpty())
+                        {*@
+                    <div class="pager">
+                        @pager
+                    </div>
+                    @*}*@
+
+                    @*@{
+                            var disablePrevious = !Model.IsPreviousPageAvailable ? "disabled" : "";
+                            var disableNext = !Model.IsNextPageAvailable ? "disabled" : "";
+                        }
+                        @if (Model.IsNextPageAvailable || Model.IsPreviousPageAvailable)
+                        {
+                            <nav>
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item previous @disablePrevious">
+                                        <a asp-action="Index"
+                                           asp-route-pageNumber="@(Model.PageIndex - 1)"
+                                           class="page-link @disablePrevious">قبلی</a>
+                                    </li>
+                                    <li class="page-item next @disableNext">
+                                        <a asp-action="Index"
+                                           asp-route-pageNumber="@(Model.PageIndex + 1)"
+                                           class="page-link @disableNext">بعدی</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        }*@
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

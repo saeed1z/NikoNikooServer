@@ -1,0 +1,79 @@
+﻿@using OnlineServices.Api.Helpers
+@using OnlineServices.Entity
+@model IEnumerable<OnlineServices.ViewModel.TicketViewModel>
+
+@{
+    ViewData["Title"] = "تیکت ها";
+}
+
+<div class="content-header row">
+    <div class="content-header-left col-12 my-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h5 class="content-header-title float-left">@ViewData["Title"]</h5>
+                <div class="breadcrumb-wrapper ">
+                    <ol class="breadcrumb p-0 pl-1 mb-0">
+                        <li class="breadcrumb-item">
+                            <a asp-controller="Home" asp-action="Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            @ViewData["Title"]
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-body">
+    <section id="brand-list-content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content table-responsive">
+                        <table class="table mb-0 line-height-1">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        عنوان
+                                    </th>
+                                    <th>
+                                        تاریخ ایجاد
+                                    </th>
+                                    <th>
+                                        شماره تلفن
+                                    </th>
+                                    <th>
+                                        وضعیت
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@(item.Title.Length > 10? item.Title.Substring(0,10) + "...": item.Title)</td>
+                                        <td>@item.CrateDate</td>
+                                        <td>@(((Person)item.Person).MobileNo)</td>
+                                        <td>@item.Status</td>
+                                        <td>
+                                            <a data-toggle="tooltip" title="مشاهده">
+                                                <i class="badge-circle badge-circle-light-secondary bx bxs-show font-medium-1"></i>
+                                            </a>
+                                            <a data-toggle="tooltip" title="بستن">
+                                                <i class="badge-circle badge-circle-light-danger bx bxs-hide font-medium-1"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
