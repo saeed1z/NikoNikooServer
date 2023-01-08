@@ -608,19 +608,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\siama\\.nuget\\packages\\": {}
+    "C:\\Users\\asus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj",
+      "projectUniqueName": "D:\\Projects\\Web Projects\\NikoNikooServer\\OnlineServices.Entity\\OnlineServices.Entity.csproj",
       "projectName": "OnlineServices.Entity",
-      "projectPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\OnlineServices.Entity.csproj",
-      "packagesPath": "C:\\Users\\siama\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\siama\\OneDrive\\Desktop\\onlineservicesv2\\onlineservicesv2\\OnlineServices.Entity\\obj\\",
+      "projectPath": "D:\\Projects\\Web Projects\\NikoNikooServer\\OnlineServices.Entity\\OnlineServices.Entity.csproj",
+      "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\Web Projects\\NikoNikooServer\\OnlineServices.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\siama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -685,7 +685,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
