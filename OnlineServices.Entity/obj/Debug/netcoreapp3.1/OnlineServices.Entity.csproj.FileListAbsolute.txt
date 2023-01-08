@@ -8,3 +8,13 @@ C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices
 C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.csproj.CoreCompileInputs.cache
 C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.dll
 C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.pdb
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Entity\bin\Debug\netcoreapp3.1\OnlineServices.Entity.deps.json
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Entity\bin\Debug\netcoreapp3.1\OnlineServices.Entity.dll
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Entity\bin\Debug\netcoreapp3.1\OnlineServices.Entity.pdb
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.csproj.AssemblyReference.cache
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.AssemblyInfoInputs.cache
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.AssemblyInfo.cs
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.csproj.CoreCompileInputs.cache
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.dll
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Entity\obj\Debug\netcoreapp3.1\OnlineServices.Entity.pdb

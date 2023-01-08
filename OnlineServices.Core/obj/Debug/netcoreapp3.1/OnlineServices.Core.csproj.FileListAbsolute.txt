@@ -15,3 +15,20 @@ C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices
 C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.csproj.CopyComplete
 C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.dll
 C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.pdb
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Core.deps.json
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Core.dll
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Core.pdb
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Entity.dll
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.dll
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.ViewModel.dll
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Entity.pdb
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.pdb
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\bin\Debug\netcoreapp3.1\OnlineServices.ViewModel.pdb
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.csproj.AssemblyReference.cache
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.AssemblyInfoInputs.cache
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.AssemblyInfo.cs
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.csproj.CoreCompileInputs.cache
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.csproj.CopyComplete
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.dll
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Core\obj\Debug\netcoreapp3.1\OnlineServices.Core.pdb

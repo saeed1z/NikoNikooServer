@@ -14,3 +14,19 @@ C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices
 C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.dll
 C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.pdb
 C:\Users\siama\OneDrive\Desktop\onlineservicesv2\onlineservicesv2\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.genruntimeconfig.cache
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.deps.json
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.runtimeconfig.json
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.runtimeconfig.dev.json
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.dll
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Persistence.pdb
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Entity.dll
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\bin\Debug\netcoreapp3.1\OnlineServices.Entity.pdb
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.csproj.AssemblyReference.cache
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.AssemblyInfoInputs.cache
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.AssemblyInfo.cs
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.csproj.CoreCompileInputs.cache
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.csproj.CopyComplete
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.dll
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.pdb
+D:\Projects\Web Projects\NikoNikooServer\OnlineServices.Persistence\obj\Debug\netcoreapp3.1\OnlineServices.Persistence.genruntimeconfig.cache
