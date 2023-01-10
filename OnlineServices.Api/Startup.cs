@@ -13,6 +13,8 @@ using OnlineServices.Core;
 using OnlineServices.Persistence;
 using System;
 using System.Text;
+using OnlineServices.Api.Helpers;
+using OnlineServices.Core.Nikoo;
 
 namespace OnlineServices.Api
 {
@@ -28,10 +30,14 @@ namespace OnlineServices.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddDbContext<OnlineServicesDbContext>(options =>
-                options.UseLazyLoadingProxies().UseSqlServer(
-                    Configuration.GetConnectionString("DB_OnlineServicesConnection"))
-                );
+                { options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")); });
+
+            //services.AddDbContext<OnlineServicesDbContext>(options =>
+            //    options.UseLazyLoadingProxies().UseSqlServer(
+            //        Configuration.GetConnectionString("DB_OnlineServicesConnection"))
+            //    );
             services.AddIdentity<IdentityUser, IdentityRole>(
                 options =>
                 {
@@ -140,6 +146,8 @@ namespace OnlineServices.Api
             services.AddTransient<ICommercialUserRequestServices, CommercialUserRequestServices>();
             services.AddTransient<ITicketServices, TicketServices>();
             services.AddTransient<ITicketCommentServices, TicketCommentServices>();
+            services.AddTransient<INikooPayment, NikooPaymentrRpository>();
+            services.AddTransient<SettingMethod, SettingMethod>();
 
             #endregion
         }

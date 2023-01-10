@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "h4M4OjVPa3k2yfGHSvDxm7oeWYwscxoZhZrZhCgYmpQgvfdA2Iufq5RELAZGnUmjfdbT5mRzpFpOLIsjwysJqg==",
+  "dgSpecHash": "tWHBq5h5o2TtovZNcJKNXd3kNPS42EpQuD6jnarrMF2VB9el7ykHTMGaYr7wTG6SoQjPMGDXOMi4pZsRzrtqqg==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Web Projects\\NikoNikooServer\\OnlineServices.ViewModel\\OnlineServices.ViewModel.csproj",
   "expectedPackageFiles": [
@@ -20,10 +20,7 @@
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.5\\microsoft.extensions.primitives.3.1.5.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
-    "C:\\Users\\asus\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",
-    "C:\\Users\\asus\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\asus\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\asus\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\asus\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

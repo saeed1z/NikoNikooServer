@@ -85,5 +85,6 @@ namespace OnlineServices.Persistence
         public DbSet<Ticket> Tickets { get; set; }
 
         public DbSet<TicketComments> TicketComments { get; set; }
+        public DbSet<NikooPayment> NikooPayments { get; set; }
     }
 }

@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OnlineServices.Persistence;
 
+#nullable disable
+
 namespace OnlineServices.Persistence.Migrations
 {
     [DbContext(typeof(OnlineServicesDbContext))]
@@ -15,9 +17,10 @@ namespace OnlineServices.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.7")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "6.0.12")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -29,29 +32,30 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("NormalizedName")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
-                        .HasName("RoleNameIndex")
+                        .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("AspNetRoles");
+                    b.ToTable("AspNetRoles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
@@ -67,7 +71,7 @@ namespace OnlineServices.Persistence.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetRoleClaims");
+                    b.ToTable("AspNetRoleClaims", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
@@ -83,8 +87,8 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
@@ -96,12 +100,12 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("NormalizedUserName")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
@@ -119,28 +123,29 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(256)")
-                        .HasMaxLength(256);
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
-                        .HasName("EmailIndex");
+                        .HasDatabaseName("EmailIndex");
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
-                        .HasName("UserNameIndex")
+                        .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
-                    b.ToTable("AspNetUsers");
+                    b.ToTable("AspNetUsers", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
@@ -156,7 +161,7 @@ namespace OnlineServices.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserClaims");
+                    b.ToTable("AspNetUserClaims", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
@@ -178,7 +183,7 @@ namespace OnlineServices.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserLogins");
+                    b.ToTable("AspNetUserLogins", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
@@ -193,7 +198,7 @@ namespace OnlineServices.Persistence.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles");
+                    b.ToTable("AspNetUserRoles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -212,7 +217,7 @@ namespace OnlineServices.Persistence.Migrations
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("AspNetUserTokens");
+                    b.ToTable("AspNetUserTokens", (string)null);
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.Banner", b =>
@@ -241,8 +246,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<short>("BaseKindId")
                         .HasColumnType("smallint");
@@ -291,8 +297,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<short>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("smallint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("smallint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<short>("Id"), 1L, 1);
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(2000)");
@@ -319,8 +326,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("BrandFile")
                         .HasColumnType("varchar(42)");
@@ -366,8 +374,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime?>("CreatedDate")
                         .IsRequired()
@@ -413,8 +422,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ActivityAddress")
                         .HasColumnType("nvarchar(max)");
@@ -492,8 +502,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<short>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("smallint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("smallint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<short>("Id"), 1L, 1);
 
                     b.Property<short>("BaseKindId")
                         .HasColumnType("smallint");
@@ -530,8 +541,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
 
                     b.Property<bool>("AllowResponse")
                         .HasColumnType("bit");
@@ -580,8 +592,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("BrandId")
                         .HasColumnType("int");
@@ -613,7 +626,7 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("varchar(42)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18, 0)");
+                        .HasColumnType("decimal(18,0)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -710,6 +723,35 @@ namespace OnlineServices.Persistence.Migrations
                     b.ToTable("ModelTechnicalInfo");
                 });
 
+            modelBuilder.Entity("OnlineServices.Entity.NikooPayment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsFinally")
+                        .HasColumnType("bit");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<string>("RefId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserMobile")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NikooPayments");
+                });
+
             modelBuilder.Entity("OnlineServices.Entity.PackageTemplate", b =>
                 {
                     b.Property<Guid>("Id")
@@ -736,10 +778,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("tinyint");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(12, 0)");
+                        .HasColumnType("decimal(12,0)");
 
                     b.Property<decimal>("RealPrice")
-                        .HasColumnType("decimal(12, 0)");
+                        .HasColumnType("decimal(12,0)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -767,8 +809,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<Guid>("PackageTemplateId")
                         .HasColumnType("uniqueidentifier");
@@ -896,7 +939,7 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("PostCode")
-                        .HasColumnType("decimal(10, 0)");
+                        .HasColumnType("decimal(10,0)");
 
                     b.Property<string>("RegistrationDate")
                         .HasColumnType("nvarchar(max)");
@@ -939,8 +982,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ChassisNo")
                         .IsRequired()
@@ -993,8 +1037,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("BankDocument")
                         .HasColumnType("nvarchar(max)");
@@ -1033,7 +1078,7 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(12, 0)");
+                        .HasColumnType("decimal(12,0)");
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
@@ -1059,8 +1104,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("PersonPackageId")
                         .HasColumnType("int");
@@ -1087,8 +1133,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
@@ -1252,7 +1299,7 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("varchar(12)");
 
                     b.Property<decimal?>("PostCode")
-                        .HasColumnType("decimal(10, 0)");
+                        .HasColumnType("decimal(10,0)");
 
                     b.Property<byte?>("StateId")
                         .HasColumnType("tinyint");
@@ -1326,10 +1373,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal?>("DiscountFee")
-                        .HasColumnType("decimal(18, 0)");
+                        .HasColumnType("decimal(18,0)");
 
                     b.Property<decimal?>("FinalFee")
-                        .HasColumnType("decimal(18, 0)");
+                        .HasColumnType("decimal(18,0)");
 
                     b.Property<bool?>("IsAccepted")
                         .HasColumnType("bit");
@@ -1356,7 +1403,7 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("TotalCost")
-                        .HasColumnType("decimal(18, 0)");
+                        .HasColumnType("decimal(18,0)");
 
                     b.HasKey("Id");
 
@@ -1385,7 +1432,7 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("UnitFee")
-                        .HasColumnType("decimal(18, 0)");
+                        .HasColumnType("decimal(18,0)");
 
                     b.HasKey("Id");
 
@@ -1641,8 +1688,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
@@ -1687,8 +1735,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime");
@@ -1738,8 +1787,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<short>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("smallint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("smallint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<short>("Id"), 1L, 1);
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(2000)");
@@ -1769,8 +1819,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime");
@@ -1779,7 +1830,7 @@ namespace OnlineServices.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18, 0)");
+                        .HasColumnType("decimal(18,0)");
 
                     b.Property<int>("ServiceTypeId")
                         .HasColumnType("int");
@@ -1841,8 +1892,9 @@ namespace OnlineServices.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -1980,6 +2032,8 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("BaseKindId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("BaseKind");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.City", b =>
@@ -1989,6 +2043,8 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("StateId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("State");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.CommercialUserRequest", b =>
@@ -1998,6 +2054,8 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("PersonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ConfirmMap", b =>
@@ -2021,6 +2079,14 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ToStatusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("BaseKind");
+
+                    b.Navigation("FromStatus");
+
+                    b.Navigation("SourceBaseKind");
+
+                    b.Navigation("ToStatus");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.Message", b =>
@@ -2046,6 +2112,14 @@ namespace OnlineServices.Persistence.Migrations
                     b.HasOne("OnlineServices.Entity.Person", "ToPerson")
                         .WithMany()
                         .HasForeignKey("ToPersonId");
+
+                    b.Navigation("FromPerson");
+
+                    b.Navigation("ServiceCapture");
+
+                    b.Navigation("ServiceRequest");
+
+                    b.Navigation("ToPerson");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.Model", b =>
@@ -2061,6 +2135,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("CarTypeBaseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Brand");
+
+                    b.Navigation("CarTypeBase");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ModelGallery", b =>
@@ -2070,6 +2148,8 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ModelId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Model");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ModelTechnicalInfo", b =>
@@ -2085,6 +2165,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ModelId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Base");
+
+                    b.Navigation("Model");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.PackageTemplate", b =>
@@ -2092,6 +2176,8 @@ namespace OnlineServices.Persistence.Migrations
                     b.HasOne("OnlineServices.Entity.PersonType", "PersonType")
                         .WithMany()
                         .HasForeignKey("PersonTypeId");
+
+                    b.Navigation("PersonType");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.PackageTemplateDetail", b =>
@@ -2107,6 +2193,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("PackageTemplate");
+
+                    b.Navigation("ServiceType");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.Person", b =>
@@ -2124,6 +2214,12 @@ namespace OnlineServices.Persistence.Migrations
                     b.HasOne("OnlineServices.Entity.State", "State")
                         .WithMany("Person")
                         .HasForeignKey("StateId");
+
+                    b.Navigation("City");
+
+                    b.Navigation("PersonType");
+
+                    b.Navigation("State");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.PersonCar", b =>
@@ -2139,6 +2235,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("PersonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Model");
+
+                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.PersonPackage", b =>
@@ -2154,6 +2254,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("PersonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("PackageTemplate");
+
+                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.PersonPackageDetail", b =>
@@ -2169,6 +2273,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("PersonPackage");
+
+                    b.Navigation("ServiceType");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.PersonService", b =>
@@ -2184,6 +2292,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Person");
+
+                    b.Navigation("ServiceType");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceCapture", b =>
@@ -2199,6 +2311,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceRequestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("FileTypeBase");
+
+                    b.Navigation("ServiceRequest");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceCenter", b =>
@@ -2210,6 +2326,10 @@ namespace OnlineServices.Persistence.Migrations
                     b.HasOne("OnlineServices.Entity.State", "State")
                         .WithMany()
                         .HasForeignKey("StateId");
+
+                    b.Navigation("City");
+
+                    b.Navigation("State");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceCenterDetail", b =>
@@ -2225,6 +2345,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceDetailBaseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ServiceCenter");
+
+                    b.Navigation("ServiceDetailBase");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceFactor", b =>
@@ -2232,6 +2356,8 @@ namespace OnlineServices.Persistence.Migrations
                     b.HasOne("OnlineServices.Entity.ServiceRequest", "ServiceRequest")
                         .WithMany("ServiceFactor")
                         .HasForeignKey("ServiceRequestId");
+
+                    b.Navigation("ServiceRequest");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceFactorDetail", b =>
@@ -2241,6 +2367,8 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceFactorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ServiceFactor");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceRequest", b =>
@@ -2300,6 +2428,32 @@ namespace OnlineServices.Persistence.Migrations
                     b.HasOne("OnlineServices.Entity.State", "SourceState")
                         .WithMany()
                         .HasForeignKey("SourceStateId");
+
+                    b.Navigation("Brand");
+
+                    b.Navigation("DestinationCity");
+
+                    b.Navigation("DestinationState");
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("Expert");
+
+                    b.Navigation("LastStatus");
+
+                    b.Navigation("Model");
+
+                    b.Navigation("ParentServiceRequest");
+
+                    b.Navigation("Person");
+
+                    b.Navigation("PersonCar");
+
+                    b.Navigation("ServiceType");
+
+                    b.Navigation("SourceCity");
+
+                    b.Navigation("SourceState");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceRequestAccept", b =>
@@ -2309,6 +2463,8 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceRequestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ServiceRequest");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceRequestDetail", b =>
@@ -2324,6 +2480,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceRequestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ServiceDetailBase");
+
+                    b.Navigation("ServiceRequest");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceRequestFile", b =>
@@ -2333,6 +2493,8 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceRequestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ServiceRequest");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceRequestSurvey", b =>
@@ -2348,6 +2510,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceTypeQuestionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ServiceRequest");
+
+                    b.Navigation("ServiceTypeQuestion");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceTypeQuestion", b =>
@@ -2357,6 +2523,8 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ServiceType");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceTypeRelation", b =>
@@ -2372,6 +2540,10 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("RelatedServiceType");
+
+                    b.Navigation("ServiceType");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.ServiceTypeUnitPrice", b =>
@@ -2381,6 +2553,8 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("ServiceTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ServiceType");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.Ticket", b =>
@@ -2390,6 +2564,8 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("PersonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("OnlineServices.Entity.TicketComments", b =>
@@ -2399,6 +2575,63 @@ namespace OnlineServices.Persistence.Migrations
                         .HasForeignKey("TicketId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Ticket");
+                });
+
+            modelBuilder.Entity("OnlineServices.Entity.PackageTemplate", b =>
+                {
+                    b.Navigation("PackageTemplateDetail");
+
+                    b.Navigation("PersonPackage");
+                });
+
+            modelBuilder.Entity("OnlineServices.Entity.Person", b =>
+                {
+                    b.Navigation("PersonService");
+
+                    b.Navigation("Tickets");
+                });
+
+            modelBuilder.Entity("OnlineServices.Entity.PersonPackage", b =>
+                {
+                    b.Navigation("PersonPackageDetail");
+                });
+
+            modelBuilder.Entity("OnlineServices.Entity.PersonType", b =>
+                {
+                    b.Navigation("Person");
+                });
+
+            modelBuilder.Entity("OnlineServices.Entity.ServiceFactor", b =>
+                {
+                    b.Navigation("Message");
+
+                    b.Navigation("ServiceFactorDetail");
+                });
+
+            modelBuilder.Entity("OnlineServices.Entity.ServiceRequest", b =>
+                {
+                    b.Navigation("ServiceFactor");
+
+                    b.Navigation("ServiceRequestFile");
+                });
+
+            modelBuilder.Entity("OnlineServices.Entity.ServiceType", b =>
+                {
+                    b.Navigation("PersonService");
+                });
+
+            modelBuilder.Entity("OnlineServices.Entity.State", b =>
+                {
+                    b.Navigation("City");
+
+                    b.Navigation("Person");
+                });
+
+            modelBuilder.Entity("OnlineServices.Entity.Ticket", b =>
+                {
+                    b.Navigation("TicketCommecnts");
                 });
 #pragma warning restore 612, 618
         }
