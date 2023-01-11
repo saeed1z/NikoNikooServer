@@ -1,14 +1,11 @@
 ﻿<config>
-	<domain>https://api.karmandet.com</domain>
-
-<domain>https://api.karmandet.com</domain>
-
-	<fileDomain>https://panel.karmandet.com</fileDomain>
+	<domain>https://api.nikonikooeducation.ir</domain>
+	<fileDomain>https://panel.nikonikooeducation.ir</fileDomain>
 
 
 
-	<SliderImageItem>https://panel.karmandet.com/Uploads/banners/</SliderImageItem>
-	<Filesuploader>https://panel.karmandet.com/Uploads/ServiceRequestFile/</Filesuploader>
+	<SliderImageItem>https://panel.nikonikooeducation.ir/Uploads/banners/</SliderImageItem>
+	<Filesuploader>https://panel.nikonikooeducation.ir/Uploads/ServiceRequestFile/</Filesuploader>
 
 
 	<maximomStageWidth>0</maximomStageWidth>
