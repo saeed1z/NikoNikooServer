@@ -55,14 +55,15 @@ namespace OnlineServices.Api.Controllers
                 var domain = _configuration["Url:Domain"];
                 var address = domain + "Payment/Verify?paymentId=" + paymentId;
                 var url = "";
-                if (_settingMethod.IsLocal())
-                {
-                    url = await Local((int)nikooPayment.Price, address, nikooPayment.UserMobile);
-                }
-                else
-                {
-                    url = await ZarinPall((int)nikooPayment.Price, address, nikooPayment.UserMobile);
-                }
+                //if (_settingMethod.IsLocal())
+                //{
+                //    url = await Local((int)nikooPayment.Price, address, nikooPayment.UserMobile);
+                //}
+                //else
+                //{
+                //    url = await ZarinPall((int)nikooPayment.Price, address, nikooPayment.UserMobile);
+                //}
+                url = await ZarinPall((int)nikooPayment.Price, address, nikooPayment.UserMobile);
                 return Ok(url);
 
             }

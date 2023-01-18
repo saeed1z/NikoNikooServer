@@ -36,19 +36,22 @@ namespace OnlineServices.Api.Controllers
 
                 int status = 0;
                 string refId = "";
-                if (_settingMethod.IsLocal())
-                {
-                    var payment = new ZarinpalSandbox.Payment((int)cartPayment.Price);
-                    var res = payment.Verification(authority).Result;
-                    status = res.Status;
-                    refId = res.RefId.ToString();
-                }
-                else
-                {
-                    var res = await ZarinPall(authority, (int)cartPayment.Price);
-                    status = res.Status;
-                    refId = res.RefId.ToString();
-                }
+                //if (_settingMethod.IsLocal())
+                //{
+                //    var payment = new ZarinpalSandbox.Payment((int)cartPayment.Price);
+                //    var res = payment.Verification(authority).Result;
+                //    status = res.Status;
+                //    refId = res.RefId.ToString();
+                //}
+                //else
+                //{
+                //    var res = await ZarinPall(authority, (int)cartPayment.Price);
+                //    status = res.Status;
+                //    refId = res.RefId.ToString();
+                //}
+                var res = await ZarinPall(authority, (int)cartPayment.Price);
+                status = res.Status;
+                refId = res.RefId.ToString();
                 if (status != 100) return NotFound();
 
                 //var submitPay = await _cart.VerifyPay(paymentId, refId);
